@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Feature List // Reproka Website'
@@ -35,6 +36,11 @@ export default function Home() {
           </span>
         )}
       </div>
+
+      <span style={{textShadow:'0px 0px 50px #ffffff44'}}>
+        Return to the&nbsp;
+        <Link href="/" className="underline text-cyan-200">homepage</Link>.
+      </span>
     </div>
   )
 }
