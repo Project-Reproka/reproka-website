@@ -4,7 +4,7 @@ import "@/globals/globals.css"
 
 export const metadata = {
   title: 'Reproka Website',
-  description: 'no content here for now ig idk'
+  description: 'Welcome to Reproka. This website is currently under construction.'
 }
 
 export const viewport = {

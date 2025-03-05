@@ -11,7 +11,7 @@ const port = (dev ? 3000 : 443)
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-// api routes here
+const clockApi = require('./apiroutes/clock')
 
 app.prepare().then(() => {
   const expapp = express()
@@ -20,7 +20,7 @@ app.prepare().then(() => {
 
   expapp.disable('X-Powered-By')
   
-  // api routes also go here
+  expapp.use('/api/clock', clockApi)
 
   expapp.get('*', (req, res) => {
     return handle(req, res)
