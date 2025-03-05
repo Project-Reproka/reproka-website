@@ -11,7 +11,7 @@ const port = (dev ? 3000 : 443)
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-const clockApi = require('./apiroutes/clock')
+const clockApi = require('./routes/clock')
 
 app.prepare().then(() => {
   const expapp = express()
