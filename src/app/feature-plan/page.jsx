@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Feature List // Reproka Website'
+  title: 'Feature List // Reproka Website',
+  description: 'todo'
 }
 
 export default function Home() {
