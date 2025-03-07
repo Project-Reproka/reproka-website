@@ -10,7 +10,7 @@ export default function Home() {
   var features = [
     ['Interactive countries map'],
     ['Unit conversions', '/unit-conversions'],
-    ['Clock and calendar (+ related utilities)'],
+    ['Clock and calendar (+ related utilities)', '/clock'],
     ['Climate simulator'],
     ['And more!']
   ]
