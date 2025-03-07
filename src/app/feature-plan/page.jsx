@@ -3,16 +3,16 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Feature List // Reproka Website',
-  description: 'todo'
+  description: 'This page contains a list of all planned features for the Reproka website.'
 }
 
 export default function Home() {
   var features = [
-    'Interactive countries map',
-    'Unit conversions',
-    'Clock and calendar (+ related utilities)',
-    'Climate simulator',
-    'And more!'
+    ['Interactive countries map'],
+    ['Unit conversions', '/unit-conversions'],
+    ['Clock and calendar (+ related utilities)'],
+    ['Climate simulator'],
+    ['And more!']
   ]
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="flex flex-col gap-2 items-center">
         {features.map(feature => 
           <span key={features.indexOf(feature)} className="p-2 px-6 w-full bg-[#06105a44] rounded-lg">
-            {feature}
+            {feature[1] != null ? <Link href={feature[1]} className="underline text-cyan-200">{feature[0]}</Link> : feature[0]}
           </span>
         )}
       </div>

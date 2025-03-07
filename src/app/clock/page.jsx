@@ -5,7 +5,7 @@ import Clock from '@/components/clock'
 
 export const metadata = {
   title: 'Home // Reproka Website',
-  description: 'todo'
+  description: 'A simple date/time clock following the Reproka time units.'
 }
 
 export default function ClockPage() {

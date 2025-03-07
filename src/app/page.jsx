@@ -24,7 +24,7 @@ export default function Home() {
 
       <span style={{textShadow:'0px 0px 50px #ffffff44'}}>
         In the meantime, check out our&nbsp;
-        <Link href="/feature-plan" className="underline text-cyan-200">planned feature list</Link>.
+        <Link href="/feature-plan" className="underline text-cyan-200">planned feature list</Link>. (Has links to completed features.)
       </span>
     </div>
   )
