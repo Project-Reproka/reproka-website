@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Clock from '@/components/clock'
+import Clock from '@/components/generic/clock'
 
 export const metadata = {
   title: 'Clock // Reproka Website',
