@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Clock from '@/components/clock'
 
 export const metadata = {
-  title: 'Home // Reproka Website',
+  title: 'Clock // Reproka Website',
   description: 'A simple date/time clock following the Reproka time units.'
 }
 
