@@ -1,17 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Navbar from '@/components/generic/navbar'
 
 export default function RaelContent() {
-  var language, setLanguage
+  var [language, setLanguage] = useState(0)
 
-  if (parseInt(localStorage.getItem('lang'))) {
-    [language, setLanguage] = useState(parseInt(localStorage.getItem('lang')))
-  } else {
-    [language, setLanguage] = useState(0)
-  }
+  useEffect(() => {
+    if (parseInt(localStorage.getItem('lang'))) {
+      [language, setLanguage] = useState(parseInt(localStorage.getItem('lang')))
+    }
+  }, [language, setLanguage])
   
   return (
     <div className="min-h-screen w-full flex flex-row items-center gap-9 text-center">
