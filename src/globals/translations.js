@@ -1,7 +1,7 @@
 const languages = {
   'English': {
     general: {
-      projname: 'Project Reproka',
+      projectname: 'Project Reproka',
       planetname: 'Reproka'
     },
     navbar: {
@@ -19,7 +19,6 @@ const languages = {
       pagereq: 'The page you requested could not be found.'
     },
     home: {
-      header: 'Project Reproka',
       construction: 'This website is currently under construction.',
       checkback: 'Check back later and I\'m sure there\'ll be something new here!'
     },

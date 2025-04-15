@@ -20,7 +20,7 @@ export default function RaelContent() {
       <Navbar language={language} setlg={setLanguage} />
 
       <div className="w-full px-16 flex flex-col items-center justify-center gap-9 text-center">
-        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('home.header', language)}</span>
+        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('general.projectname', language)}</span>
         
         <Image src="/resources/images/overexposed.png"
           height="280"
