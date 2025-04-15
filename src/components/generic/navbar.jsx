@@ -15,7 +15,7 @@ export default function Navbar({ language, setlg }) {
       </div>
 
       <div className="flex flex-col gap-4 items-center">
-        <LangSwitch setlg={setlg} />
+        <LangSwitch setlg={setlg} language={language} />
 
         <span>{gettext('navbar.copyright', language)}</span>
       </div>

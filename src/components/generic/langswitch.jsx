@@ -7,7 +7,7 @@ export default function LangSwitch({ setlg, language }) {
   }
 
   return (
-    <select className="w-10/12 bg-[rgba(127,127,255,10%)] px-2 py-2 rounded-lg" onChange={handleChange}> 
+    <select className="w-10/12 bg-[rgba(127,127,255,10%)] px-2 py-2 rounded-lg" onChange={handleChange} value={language}>
       {langlist.map(item => 
         <option value={langlist.indexOf(item)} key={langlist.indexOf(item)} className="bg-[#313157]">{item}</option>
       )}

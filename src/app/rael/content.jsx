@@ -9,7 +9,7 @@ export default function RaelContent() {
 
   useEffect(() => {
     if (parseInt(localStorage.getItem('lang'))) {
-      [language, setLanguage] = useState(parseInt(localStorage.getItem('lang')))
+      setLanguage(parseInt(localStorage.getItem('lang')))
     }
   }, [language, setLanguage])
   
