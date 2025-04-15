@@ -3,7 +3,7 @@ import "@/globals/globals.css"
 // providing metadata as a backup ig
 
 export const metadata = {
-  title: 'Reproka Website',
+  title: 'Project Reproka',
   description: 'Welcome to Reproka. This website is currently under construction.'
 }
 

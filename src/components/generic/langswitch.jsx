@@ -3,6 +3,7 @@ import { langlist } from '@/globals/translations'
 export default function LangSwitch({ setlg, language }) {
   function handleChange(e) {
     setlg(parseInt(e.target.value))
+    localStorage.setItem('lang', parseInt(e.target.value))
   }
 
   return (

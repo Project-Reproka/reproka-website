@@ -5,7 +5,13 @@ import { useState } from 'react'
 import Navbar from '@/components/generic/navbar'
 
 export default function RaelContent() {
-  const [language, setLanguage] = useState(0)
+  var language, setLanguage
+
+  if (parseInt(localStorage.getItem('lang'))) {
+    [language, setLanguage] = useState(parseInt(localStorage.getItem('lang')))
+  } else {
+    [language, setLanguage] = useState(0)
+  }
   
   return (
     <div className="min-h-screen w-full flex flex-row items-center gap-9 text-center">
