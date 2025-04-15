@@ -1,5 +1,9 @@
 const languages = {
   'English': {
+    general: {
+      projname: 'Project Reproka',
+      planetname: 'Reproka'
+    },
     navbar: {
       copyright: '© Project Reproka 2025',
       headertext: 'Project Reproka',
@@ -18,6 +22,10 @@ const languages = {
       header: 'Project Reproka',
       construction: 'This website is currently under construction.',
       checkback: 'Check back later and I\'m sure there\'ll be something new here!'
+    },
+    clock: {
+      title: 'Reproka Clock',
+      return: 'Return to the homepage via the sidebar to the left.'
     }
   },
   'Spanish': {
@@ -127,4 +135,12 @@ function get(thing, lang) {
   return text3
 }
 
-module.exports = { langlist: langlist, gettext: get }
+function number(num, lang) {
+  if (lang == 3) { // progaza, octal
+    return num.toString(8)
+  } else {
+    return num.toString()
+  }
+}
+
+module.exports = { langlist: langlist, gettext: get, numconv: number }

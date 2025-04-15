@@ -25,7 +25,7 @@ export default function Content404() {
         <Image src="/resources/images/overexposed.png"
           height="280"
           width="280"
-          alt="Reproka"
+          alt={gettext('general.planetname', language)}
           className="rounded-xl border-cyan-200 border-2 shadow-custom"
           />
 
