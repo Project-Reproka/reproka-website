@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import { gettext } from '@/globals/translations'
 import Navbar from '@/components/generic/navbar'
 
 export default function RaelContent() {
@@ -13,16 +14,13 @@ export default function RaelContent() {
       setLanguage(parseInt(localStorage.getItem('lang')))
     }
   }, [language, setLanguage])
-  
-  var te1=<span className="text-5xl">super probably placeholder text</span>
-  var te2=<img src="https://i.ytimg.com/vi/201EZ5ItSm4/maxresdefault.jpg" />
 
   return (
-    <div className="min-h-screen w-full flex flex-row items-center gap-9 text-center">
+    <div className="min-h-screen w-full flex flex-row items-center text-center">
       <Navbar language={language} setlg={setLanguage} />
 
-      <div className="px-16 flex flex-col items-center justify-center gap-9 text-center">
-        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>Reproka Website</span>
+      <div className="w-full px-16 flex flex-col items-center justify-center gap-9 text-center">
+        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('home.header', language)}</span>
         
         <Image src="/resources/images/overexposed.png"
           height="280"
@@ -32,8 +30,8 @@ export default function RaelContent() {
           />
 
         <span className="text-xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>
-          This website is currently under construction. <br />
-          Check back later and I&apos;m sure there&apos;ll be something new here!
+          {gettext('home.construction', language)} <br />
+          {gettext('home.checkback', language)}
         </span>
       </div>
     </div>

@@ -3,16 +3,28 @@ const languages = {
     navbar: {
       copyright: '© Project Reproka 2025',
       headertext: 'Project Reproka',
+      home: 'Home',
       clock: 'Clock',
       conversions: 'Unit Conversions',
       featureplan: 'Feature Plan',
       btnalt: 'Icon'
+    },
+    notfound: {
+      pagenotfound: '404 - Page not found',
+      lost: 'Lost? Return to our homepage via the sidebar to the left.',
+      pagereq: 'The page you requested could not be found.'
+    },
+    home: {
+      header: 'Project Reproka',
+      construction: 'This website is currently under construction.',
+      checkback: 'Check back later and I\'m sure there\'ll be something new here!'
     }
   },
   'Spanish': {
     navbar: {
       copyright: 'spanish',
       headertext: 'spanish',
+      home: 'spanish',
       clock: 'spanish',
       conversions: 'spanish',
       featureplan: 'spanish',
@@ -23,6 +35,7 @@ const languages = {
     navbar: {
       copyright: 'german',
       headertext: 'german',
+      home: 'german',
       clock: 'german',
       conversions: 'german',
       featureplan: 'german',
@@ -33,6 +46,7 @@ const languages = {
     navbar: {
       copyright: '[]  ',
       headertext: '',
+      home: 'progaza',
       clock: '',
       conversions: '',
       featureplan: '',
@@ -43,6 +57,7 @@ const languages = {
     navbar: {
       copyright: 'reska',
       headertext: 'reska',
+      home: 'reska',
       clock: 'reska',
       conversions: 'reska',
       featureplan: 'reska',
@@ -53,6 +68,7 @@ const languages = {
     navbar: {
       copyright: 'thassian+friends',
       headertext: 'thassian+friends',
+      home: 'thassian+friends',
       clock: 'thassian+friends',
       conversions: 'thassian+friends',
       featureplan: 'thassian+friends',
@@ -64,6 +80,7 @@ const languages = {
       copyright: 'kokos+friends',
       headertext: 'kokos+friends',
       clock: 'kokos+friends',
+      home: 'kokos+friends',
       conversions: 'kokos+friends',
       featureplan: 'kokos+friends',
       btnalt: 'kokos+friends'
@@ -73,6 +90,7 @@ const languages = {
     navbar: {
       copyright: 'xorgara',
       headertext: 'xorgara',
+      home: 'xorgara',
       clock: 'xorgara',
       conversions: 'xorgara',
       featureplan: 'xorgara',
@@ -83,6 +101,7 @@ const languages = {
     navbar: {
       copyright: 'tolema',
       headertext: 'tolema',
+      home: 'tolema',
       clock: 'tolema',
       conversions: 'tolema',
       featureplan: 'tolema',
@@ -95,9 +114,17 @@ const langlist = Object.keys(languages)
 
 function get(thing, lang) {
   var place = thing.split('.')
-  var text = languages[langlist[lang]][place[0]][place[1]]
 
-  return (text ? text : languages['English'][place[0]][place[1]])
+  var text1 = languages[langlist[lang]]
+  if (!text1) return languages['English'][place[0]][place[1]]
+
+  var text2 = text1[place[0]]
+  if (!text2) return languages['English'][place[0]][place[1]]
+
+  var text3 = text2[place[1]]
+  if (!text3) return languages['English'][place[0]][place[1]]
+
+  return text3
 }
 
 module.exports = { langlist: langlist, gettext: get }

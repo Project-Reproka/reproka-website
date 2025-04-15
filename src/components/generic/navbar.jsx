@@ -9,6 +9,7 @@ export default function Navbar({ language, setlg }) {
       <span className="text-2xl">{gettext('navbar.headertext', language)}</span>
 
       <div className="flex flex-col gap-2 pr-4">
+        <NavButton language={language} link={'/'} icon={'home-6.svg'} content={gettext('navbar.home', language)} />
         <NavButton language={language} link={'/clock'} icon={'time-18.svg'} content={gettext('navbar.clock', language)} />
         <NavButton language={language} link={'/unit-conversions'} icon={'cursor-16.svg'} content={gettext('navbar.conversions', language)} />
         <NavButton language={language} link={'/feature-plan'} icon={'calendar-9.svg'} content={gettext('navbar.featureplan', language)} />
