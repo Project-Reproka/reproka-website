@@ -1,4 +1,4 @@
-const languages = { // dont uncapitalize those
+const languages = {
   'English': {
     navbar: {
       copyright: '© Project Reproka 2025',
@@ -29,7 +29,7 @@ const languages = { // dont uncapitalize those
       btnalt: 'german'
     }
   },
-  'Progaza (North Valley / Capital)': {
+  'Progaza (North Valley/Capital)': {
     navbar: {
       copyright: '[]  ',
       headertext: '',
