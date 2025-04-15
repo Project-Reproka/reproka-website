@@ -8,7 +8,7 @@ export default function RaelContent() {
   const [language, setLanguage] = useState(0)
   
   return (
-    <div className="font-sans min-h-screen w-full flex flex-row items-center gap-9 text-center">
+    <div className="min-h-screen w-full flex flex-row items-center gap-9 text-center">
       <Navbar language={language} setlg={setLanguage} />
 
       <div>

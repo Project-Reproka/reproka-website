@@ -1,5 +1,3 @@
-const langlist = [ 'English', 'Spanish', 'German', 'Progaza', 'Reska', 'Thassian', 'Kokos', 'Xorgara', 'Tolema' ]
-
 const languages = { // dont uncapitalize those
   'English': {
     navbar: {
@@ -31,14 +29,14 @@ const languages = { // dont uncapitalize those
       btnalt: 'german'
     }
   },
-  'Progaza': {
+  'Progaza (North Valley / Capital)': {
     navbar: {
-      copyright: 'progaza',
-      headertext: 'progaza',
-      clock: 'progaza',
-      conversions: 'progaza',
-      featureplan: 'progaza',
-      btnalt: 'progaza'
+      copyright: '[]  ',
+      headertext: '',
+      clock: '',
+      conversions: '',
+      featureplan: '',
+      btnalt: ''
     }
   },
   'Reska': {
@@ -93,10 +91,13 @@ const languages = { // dont uncapitalize those
   }
 }
 
+const langlist = Object.keys(languages)
+
 function get(thing, lang) {
   var place = thing.split('.')
+  var text = languages[langlist[lang]][place[0]][place[1]]
 
-  return languages[langlist[lang]][place[0]][place[1]]
+  return (text ? text : languages['English'][place[0]][place[1]])
 }
 
 module.exports = { langlist: langlist, gettext: get }

@@ -43,7 +43,7 @@ export default function Home() {
   }
  
   return (
-    <div className="font-sans h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
+    <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
       <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>Unit Conversion</span>
 
       <Converter units={units} />

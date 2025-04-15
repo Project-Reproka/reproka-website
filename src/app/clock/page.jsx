@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function ClockPage() {
   return (
-    <div className="font-sans h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
+    <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
       <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>Reproka Clock</span>
     
-      <Image src="/overexposed.png"
+      <Image src="/resources/images/overexposed.png"
         height="280"
         width="280"
         alt="Reproka"
