@@ -1,8 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { gettext, langlist, number } from '@/globals/translations'
+import Image from 'next/image';
 
-export default function Clock() {
+
+export default function Clock({language}) {
   const [date, setDate] = useState({ seasonal: "", lunar: "", time: "" });
 
   useEffect(() => {
@@ -37,22 +40,62 @@ export default function Clock() {
       const dayInLunarMonth = (elapsedDays % daysPerLunarMonth) + 1;
 
       const seasonNames = [
-        "nozoþu", "nozošau", "masojažeþu", "masojažšau",
-        "lačejoþu", "lačejošau", "duðyþu", "duðyšau"
+        [gettext("clock.smonthnames.bsp", language)],
+        [gettext("clock.smonthnames.esp", language)],
+        [gettext("clock.smonthnames.bsu", language)],
+        [gettext("clock.smonthnames.esu", language)],
+        [gettext("clock.smonthnames.bhr", language)],
+        [gettext("clock.smonthnames.ehr", language)],
+        [gettext("clock.smonthnames.bwr", language)],
+        [gettext("clock.smonthnames.ewr", language)]
       ];
 
       const lunarNames = [
-        "esunþel", "čazkilþel", "sjolþel", "saðkašþel", "saðaþel", "ankesunþel",
-        "čuvuþel", "þunþel", "ankaþel", "šoijeiþel", "kjuzaþel", "aþačiþel",
-        "kyčefoþel", "zaiþel", "seroþel", "þažaiþel", "oðizþel", "omþel", "zakoloþel", "liðyþel"
+        [gettext("clock.lmonthnames.1", language)],
+        [gettext("clock.lmonthnames.2", language)],
+        [gettext("clock.lmonthnames.3", language)],
+        [gettext("clock.lmonthnames.4", language)],
+        [gettext("clock.lmonthnames.5", language)],
+        [gettext("clock.lmonthnames.6", language)],
+        [gettext("clock.lmonthnames.7", language)],
+        [gettext("clock.lmonthnames.8", language)],
+        [gettext("clock.lmonthnames.9", language)],
+        [gettext("clock.lmonthnames.10", language)],
+        [gettext("clock.lmonthnames.11", language)],
+        [gettext("clock.lmonthnames.12", language)],
+        [gettext("clock.lmonthnames.13", language)],
+        [gettext("clock.lmonthnames.14", language)],
+        [gettext("clock.lmonthnames.15", language)],
+        [gettext("clock.lmonthnames.16", language)],
+        [gettext("clock.lmonthnames.17", language)],
+        [gettext("clock.lmonthnames.18", language)],
+        [gettext("clock.lmonthnames.19", language)],
+        [gettext("clock.lmonthnames.20", language)]
       ];
-
-      // --- Time of Day Calculation ---
-      const meals_in_day = 15;
-      const talks_in_meal = 8;
-      const longfalls_in_talk = 20;
-      const stonefalls_in_longfall = 50;
-
+      const weekdays = [
+        [gettext("clock.lwdaynames.1", language)],
+        [gettext("clock.lwdaynames.2", language)],
+        [gettext("clock.lwdaynames.3", language)],
+        [gettext("clock.lwdaynames.4", language)],
+        [gettext("clock.lwdaynames.5", language)],
+        [gettext("clock.lwdaynames.6", language)],
+        [gettext("clock.lwdaynames.7", language)],
+        [gettext("clock.lwdaynames.8", language)]
+      ];
+      var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall; 
+      console.log(language)
+      if (language == 3) {
+        meals_in_day = 0o20;
+        talks_in_meal = 0o12;
+        longfalls_in_talk = 0o30;
+        stonefalls_in_longfall = 0o40;
+      } else {
+        meals_in_day = 15;
+        talks_in_meal = 8;
+        longfalls_in_talk = 20;
+        stonefalls_in_longfall = 50;
+      }
+      
       const meal = Math.floor(daysec / (sec_in_day / meals_in_day));
       const mealsec = daysec % (sec_in_day / meals_in_day);
       const talk = Math.floor(mealsec / (sec_in_day / meals_in_day / talks_in_meal));
@@ -60,14 +103,12 @@ export default function Clock() {
       const longfall = Math.floor(talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk));
       const longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
       const stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
-
       setDate({
         seasonal: `${remainingDays + 1} ${seasonNames[seasonalMonth]}, ${seasonalYear}`,
         lunar: `${dayInLunarMonth} ${lunarNames[lunarMonth]}`,
         time: `${String(meal).padStart(2, '0')}:${talk}:${String(longfall).padStart(2, '0')}:${(String(Math.floor(stonefall)).padStart(2, '0'))}`
       });
     };
-
     updateDate();
     const interval = setInterval(updateDate, 50)
     return () => clearInterval(interval)
@@ -75,6 +116,7 @@ export default function Clock() {
 
   return (
     <div>
+      <Image src="/resources/images/clock_face/clock-decimal.svg" width={100} height={100} alt='clokc face'></Image>
       <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal}</p>
       <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
     </div>
