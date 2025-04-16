@@ -2,7 +2,8 @@ const languages = {
   'English': {
     general: {
       projectname: 'Project Reproka',
-      planetname: 'Reproka'
+      planetname: 'Reproka',
+      numberbase: 10
     },
     navbar: {
       copyright: '© Project Reproka 2025',
@@ -53,29 +54,29 @@ const languages = {
         meter: 'meter',
         kmeter: 'kilometer',
         mmeter: 'millimeter',
-        seijagemil: 'seijagemil',
-        kaibroza: 'kaibroza',
-        omstaz: 'omstaz',
-        lidhchazerun: 'liðčazerun',
-        chazerun: 'čazerun'
+        seijagemil: 'grass blade',
+        kaibroza: 'tall grass',
+        omstaz: 'stone throw',
+        lidhchazerun: 'short journey',
+        chazerun: 'journey'
       },
       mass: {
         gram: 'gram',
         kgram: 'kilogram',
         mton: 'metric ton',
-        agozuba: 'agozuba',
+        agozuba: 'small ezuba',
         ezuba: 'ezuba',
-        madhezuba: 'maðezuba'
+        madhezuba: 'large ezuba' //idk what an ezuba is tbh
       },
       volume: {
         liter: 'liter',
         mliter: 'milliliter',
-        paijas: 'paijas',
-        thusbaijas: 'þusbaijas'
+        paijas: 'generic container',
+        thusbaijas: 'hundred generic container'
       },
       temperature: {
         celcius: 'celcius',
-        thozhe: 'þože'
+        thozhe: 'heat'
       }
     }
   },
@@ -88,7 +89,8 @@ const languages = {
   'Progaza (North Valley/Capital)': {
     general: {
       projectname: '',
-      planetname: ''
+      planetname: '',
+      numberbase: 8
     },
     navbar: {
       copyright: '[]  ',
@@ -110,7 +112,7 @@ const languages = {
     },
     clock: {
       title: '',
-      clockfacealt: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+      clockfacealt: 'clockface',
       smonthnames: {bsp: '', esp: '', bsu: '', esu: '', bhr: '', ehr: '', bwr: '', ewr: ''},
       lmonthnames: {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: '', 10: '', 11: '', 12: '', 13: '', 14: '', 15: '', 16: '', 17: '', 18: '', 19: '', 20: ''},
       lwdaynames: {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: ''}
@@ -175,7 +177,9 @@ const languages = {
     // todo
   },
   'Xorgara': {
-    // todo
+    general: {
+      numberbase: 20
+    }
   },
   'Tolema': {
     // todo
