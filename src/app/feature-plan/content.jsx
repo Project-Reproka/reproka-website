@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { gettext } from '@/globals/translations'
 import Navbar from '@/components/generic/navbar'
@@ -27,7 +26,7 @@ export default function FeaturePlanContent() {
       <Navbar language={language} setlg={setLanguage} />
     
       <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
-        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>Feature Plan</span>
+        <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('plan.header', language)}</span>
 
         <Image src="/resources/images/overexposed.png"
           height="280"
