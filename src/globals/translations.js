@@ -50,14 +50,31 @@ const languages = {
     }
   },
   'Progaza (North Valley/Capital)': {
+    general: {
+      projectname: '',
+      planetname: ''
+    },
     navbar: {
       copyright: '[]  ',
       headertext: '',
-      home: 'progaza',
+      home: '',
       clock: '',
       conversions: '',
       featureplan: '',
       btnalt: ''
+    },
+    notfound: {
+      pagenotfound: '  ',
+      lost: '     ',
+      pagereq: '        '
+    },
+    home: {
+      construction: '  ',
+      checkback: '       '
+    },
+    clock: {
+      title: '',
+      return: '    '
     }
   },
   'Reska': {
