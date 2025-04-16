@@ -23,31 +23,20 @@ const languages = {
       checkback: 'Check back later and I\'m sure there\'ll be something new here!'
     },
     clock: {
-      title: 'Reproka Clock',
-      return: 'Return to the homepage via the sidebar to the left.'
+      title: 'Reproka Clock'
+    },
+    plan: {
+      featuresheader: 'Our planned features include:',
+      andmore: 'And more!',
+      interactivemap: 'Interactive region map',
+      climatesim: 'Climate simulator'
     }
   },
   'Spanish': {
-    navbar: {
-      copyright: 'spanish',
-      headertext: 'spanish',
-      home: 'spanish',
-      clock: 'spanish',
-      conversions: 'spanish',
-      featureplan: 'spanish',
-      btnalt: 'spanish'
-    }
+    // todo
   },
   'German': {
-    navbar: {
-      copyright: 'german',
-      headertext: 'german',
-      home: 'german',
-      clock: 'german',
-      conversions: 'german',
-      featureplan: 'german',
-      btnalt: 'german'
-    }
+    // todo
   },
   'Progaza (North Valley/Capital)': {
     general: {
@@ -73,64 +62,23 @@ const languages = {
       checkback: '       '
     },
     clock: {
-      title: '',
-      return: '    '
+      title: ''
     }
   },
   'Reska': {
-    navbar: {
-      copyright: 'reska',
-      headertext: 'reska',
-      home: 'reska',
-      clock: 'reska',
-      conversions: 'reska',
-      featureplan: 'reska',
-      btnalt: 'reska'
-    }
+    // todo
   },
   'Thassian': {
-    navbar: {
-      copyright: 'thassian+friends',
-      headertext: 'thassian+friends',
-      home: 'thassian+friends',
-      clock: 'thassian+friends',
-      conversions: 'thassian+friends',
-      featureplan: 'thassian+friends',
-      btnalt: 'thassian+friends'
-    }
+    // todo
   },
   'Kokos': {
-    navbar: {
-      copyright: 'kokos+friends',
-      headertext: 'kokos+friends',
-      clock: 'kokos+friends',
-      home: 'kokos+friends',
-      conversions: 'kokos+friends',
-      featureplan: 'kokos+friends',
-      btnalt: 'kokos+friends'
-    }
+    // todo
   },
   'Xorgara': {
-    navbar: {
-      copyright: 'xorgara',
-      headertext: 'xorgara',
-      home: 'xorgara',
-      clock: 'xorgara',
-      conversions: 'xorgara',
-      featureplan: 'xorgara',
-      btnalt: 'xorgara'
-    }
+    // todo
   },
   'Tolema': {
-    navbar: {
-      copyright: 'tolema',
-      headertext: 'tolema',
-      home: 'tolema',
-      clock: 'tolema',
-      conversions: 'tolema',
-      featureplan: 'tolema',
-      btnalt: 'tolema'
-    }
+    // todo
   }
 }
 

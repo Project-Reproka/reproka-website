@@ -1,7 +1,7 @@
 import RaelContent from './content'
 
 export const metadata = {
-  title: 'not Home // Reproka Website'
+  title: 'Home // Reproka Website'
 }
 
 export default function Home() {
