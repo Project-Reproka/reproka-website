@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { gettext } from '@/globals/translations'
 import Navbar from '@/components/generic/navbar'
 
-export default function RaelContent() {
+export default function HomeContent() {
   var [language, setLanguage] = useState(0)
 
   useEffect(() => {
@@ -19,9 +19,9 @@ export default function RaelContent() {
     <div className="min-h-screen w-full flex flex-row items-center text-center">
       <Navbar language={language} setlg={setLanguage} />
 
-      <div className="w-full px-16 flex flex-col items-center justify-center gap-9 text-center">
+      <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
         <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('general.projectname', language)}</span>
-        
+
         <Image src="/resources/images/overexposed.png"
           height="280"
           width="280"

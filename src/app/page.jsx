@@ -1,4 +1,4 @@
-import RaelContent from './content'
+import HomeContent from './content'
 
 export const metadata = {
   title: 'Home // Reproka Website'
@@ -6,6 +6,6 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <RaelContent />
+    <HomeContent />
   )
 }
