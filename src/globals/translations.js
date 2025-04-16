@@ -105,7 +105,7 @@ const languages = {
       checkback: '        '
     },
     clock: {
-      title: ''
+      title: ''
     },
     plan: {
       featuresheader: '   ',
