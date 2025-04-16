@@ -91,7 +91,7 @@ const languages = {
       headertext: '',
       home: '',
       clock: '',
-      conversions: '',
+      conversions: '',
       featureplan: '',
       btnalt: ''
     },
@@ -106,6 +106,55 @@ const languages = {
     },
     clock: {
       title: ''
+    },
+    plan: {
+      featuresheader: '   ',
+      header: '',
+      andmore: '  ',
+      interactivemap: ' ',
+      climatesim: ''
+    },
+    conversions: {
+      header: '',
+      nounitgroup: '  ',
+      sourcenum: '',
+      group: '',
+      lengthlbl: '',
+      masslbl: '',
+      volumelbl: '',
+      temperaturelbl: '',
+      sourceunit: '',
+      targetunit: '',
+      convertbtn: '',
+      result: ' ', // do not leave a space after this please
+      length: {
+        meter: '',
+        kmeter: '',
+        mmeter: '',
+        seijagemil: '',
+        kaibroza: '',
+        omstaz: '',
+        lidhchazerun: '',
+        chazerun: ''
+      },
+      mass: {
+        gram: '',
+        kgram: '',
+        mton: '',
+        agozuba: '',
+        ezuba: '',
+        madhezuba: ''
+      },
+      volume: {
+        liter: '',
+        mliter: '',
+        paijas: '',
+        thusbaijas: ''
+      },
+      temperature: {
+        celcius: '',
+        thozhe: ''
+      }
     }
   },
   'Reska': {
