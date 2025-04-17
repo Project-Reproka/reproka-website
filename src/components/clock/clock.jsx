@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { gettext, langlist, number } from '@/globals/translations'
 import Image from 'next/image';
+const {createCanvas, loadImage} = require("canvas")
 
 
 export default function Clock({language}) {
@@ -35,7 +36,8 @@ export default function Clock({language}) {
         seasonalMonth++;
       }
 
-      // --- Independent Lunar Calendar Calculation ---
+      // ---  Lunar Calendar Calculation ---
+      // me when chatgpt code real
       const lunarMonth = Math.floor(elapsedDays / daysPerLunarMonth) % 20; // 20-month repeating cycle
       const dayInLunarMonth = (elapsedDays % daysPerLunarMonth) + 1;
 
@@ -83,40 +85,69 @@ export default function Clock({language}) {
         [gettext("clock.lwdaynames.7", language)],
         [gettext("clock.lwdaynames.8", language)]
       ]
-
+      var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall;
       var base = gettext('general.numberbase', language)
-      var meals_in_day = 15
-      var talks_in_meal = 8
-      var longfalls_in_talk = 20
-      var stonefalls_in_longfall = 50
-      
-      const meal = Math.floor(daysec / (sec_in_day / meals_in_day));
-      const mealsec = daysec % (sec_in_day / meals_in_day);
-      const talk = Math.floor(mealsec / (sec_in_day / meals_in_day / talks_in_meal));
-      const talksec = mealsec % (sec_in_day / meals_in_day / talks_in_meal);
-      const longfall = Math.floor(talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk));
-      const longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
-      const stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
+      if (base == 8) {
+        meals_in_day = 0o20;
+        talks_in_meal = 0o12;
+        longfalls_in_talk = 0o30;
+        stonefalls_in_longfall = 0o40;
+      } else if (base == 10) {
+        var meals_in_day = 15
+        var talks_in_meal = 8
+        var longfalls_in_talk = 20
+        var stonefalls_in_longfall = 50
+      }
+      var meal = Math.floor(daysec / (sec_in_day / meals_in_day));
+      var mealsec = daysec % (sec_in_day / meals_in_day);
+      var talk = Math.floor(mealsec / (sec_in_day / meals_in_day / talks_in_meal));
+      var talksec = mealsec % (sec_in_day / meals_in_day / talks_in_meal);
+      var longfall = Math.floor(talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk));
+      var longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
+      var stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
 
       setDate({
         seasonal: `${(remainingDays + 1).toString(base)} ${seasonNames[seasonalMonth]}, ${seasonalYear.toString(base)}`,
         lunar: `${dayInLunarMonth.toString(base)} ${lunarNames[lunarMonth]}`,
-        time: `${String(meal.toString(base)).padStart(2, '0')}:${talk.toString(base)}:${String(longfall.toString(base)).padStart(2, '0')}:${String(Math.floor(stonefall).toString(base)).padStart(2, '0')}`
+        time: `${String(meal.toString(base)).padStart(2, '0')}:${talk.toString(base)}:${String(longfall.toString(base)).padStart(2, '0')}:${String(Math.floor(stonefall).toString(base)).padStart(2, '0')}`,
+        meal: meal,
+        talk: talk,
+        mid:  meals_in_day,
+        tim:  talks_in_meal
       })
     }
-
+    var image;
+    if (gettext("general.numberbase", language) == 8) {
+      image = "/resources/images/clockfaces/clock-octal.svg";
+    } else if (gettext("general.numberbase", language) == 10) {
+      image = "/resources/images/clockfaces/clock-decimal.svg";
+    }
+    var c = createCanvas(280, 280)
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'hex(#ff0000)'
+    ctx.beginPath();
+    ctx.lineTo(140, 280);
+    ctx.stroke()
+    loadImage(image).then((image) => {
+      ctx.drawImage(image)
+    })
     updateDate()
 
     const interval = setInterval(updateDate, 50)
     return () => clearInterval(interval)
   }, [language])
-
+  
+  
   return (
     <div>
-      {/*<Image src="/resources/images/clockfaces/clock-decimal.svg" width={100} height={100} alt={gettext('clock.cloclfacealt', language)} />*/}
-      
-      <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal}</p>
-      <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
+      <div>
+
+      </div>
+      <div>
+        {/*<Image src="/resources/images/clockfaces/clock-decimal.svg" width={100} height={100} alt={gettext('clock.cloclfacealt', language)} />*/}
+        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal}</p>
+        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
+      </div>
     </div>
   )
 }
