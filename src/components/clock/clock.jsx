@@ -1,13 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { gettext, langlist, number } from '@/globals/translations'
-import Image from 'next/image';
-const {createCanvas, loadImage} = require("canvas")
+import { gettext } from '@/globals/translations'
+import Image from 'next/image'
 
 
-export default function Clock({language}) {
-  const [date, setDate] = useState({ seasonal: "", lunar: "", time: "" });
+export default function Clock({ language }) {
+  const [date, setDate] = useState({ seasonal: "", lunar: "", time: "", meal: 0, talk: 0, mid: 0, tim: 0 })
 
   useEffect(() => {
     const updateDate = () => {
@@ -85,6 +84,7 @@ export default function Clock({language}) {
         [gettext("clock.lwdaynames.7", language)],
         [gettext("clock.lwdaynames.8", language)]
       ]
+
       var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall;
       var base = gettext('general.numberbase', language)
       if (base == 8) {
@@ -115,37 +115,63 @@ export default function Clock({language}) {
         mid:  meals_in_day,
         tim:  talks_in_meal
       })
+
+      updatehands()
     }
-    var image;
-    if (gettext("general.numberbase", language) == 8) {
-      image = "/resources/images/clockfaces/clock-octal.svg";
-    } else if (gettext("general.numberbase", language) == 10) {
-      image = "/resources/images/clockfaces/clock-decimal.svg";
+
+    function getPointOnCircle(centerx, centery, radius, deg) {
+      deg -= 90
+
+      var rad = deg * (Math.PI / 180) // radian-ifier
+
+      var xpos = centerx + radius * Math.cos(rad)
+      var ypos = centery + radius * Math.sin(rad)
+
+      return { xpos, ypos }
     }
-    var c = createCanvas(280, 280)
-    var ctx = c.getContext("2d");
-    ctx.strokeStyle = 'hex(#ff0000)'
-    ctx.beginPath();
-    ctx.lineTo(140, 280);
-    ctx.stroke()
-    loadImage(image).then((image) => {
-      ctx.drawImage(image)
-    })
+
+    var canvas = document.getElementById('clockhands')
+    var ctx = canvas.getContext('2d')
+    ctx.lineWidth = 4
+
+    function updatehands() {
+      var pos1 = getPointOnCircle(140, 140, 100, (date.talk / date.tim) * 360)
+      var pos2 = getPointOnCircle(140, 140, 80, (date.meal / date.mid) * 360)
+
+      ctx.clearRect(0, 0, 280, 280)
+      console.log(date.meal, date.talk)
+
+      setTimeout(() => {
+        ctx.strokeStyle = '#ff3311'
+        ctx.beginPath()
+        ctx.moveTo(140, 140)
+        ctx.lineTo(pos1.xpos, pos1.ypos)
+        ctx.stroke()
+
+        ctx.strokeStyle = '#ffffff'
+        ctx.beginPath()
+        ctx.moveTo(140, 140)
+        ctx.lineTo(pos2.xpos, pos2.ypos)
+        ctx.stroke()
+      }, 125)
+    }
+
     updateDate()
 
-    const interval = setInterval(updateDate, 50)
-    return () => clearInterval(interval)
+    const int = setInterval(updateDate, 500)
+    return () => clearInterval(int)
   }, [language])
   
   
   return (
-    <div>
-      <div>
-
+    <div className="flex flex-col gap-8">
+      <div className="relative h-[280px] w-[280px]">
+        <Image className="absolute top-0 left-0" src={'/resources/images/clockfaces/clock-' + (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '.svg'} width={280} height={280} alt={gettext('clock.clockfacealt', language)} />
+        <canvas className="absolute top-0 left-0" id="clockhands" width={280} height={280} />
       </div>
+
       <div>
-        {/*<Image src="/resources/images/clockfaces/clock-decimal.svg" width={100} height={100} alt={gettext('clock.cloclfacealt', language)} />*/}
-        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal}</p>
+        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal || '\u00a0'}</p>
         <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
       </div>
     </div>
