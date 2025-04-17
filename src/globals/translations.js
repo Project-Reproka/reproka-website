@@ -26,9 +26,23 @@ const languages = {
     clock: {
       title: 'Reproka Clock',
       clockfacealt: 'clockface',
-      smonthnames: {bsp: 'nozoþu', esp: 'nozošau', bsu: 'masojažeþu', esu: 'masojažšau', bhr: 'lačejoþu', ehr: 'lačejošau', bwr: 'duðyþu', ewr: 'duðyšau'},
-      lmonthnames: {1: 'water moon', 2: 'flower moon', 3: 'fire moon', 4: 'tree moon', 5: 'sky moon', 6: 'fog moon', 7: 'lightning moon', 8: 'thunder moon', 9: 'wind moon', 10: 'middle moon', 11: 'story moon', 12: 'battle moon', 13: 'bright moon', 14: 'dark moon', 15: 'blue moon', 16: 'mountain moon', 17: 'cave moon', 18: 'stone moon', 19: 'gold moon', 20: 'short moon'},
-      lwdaynames: {1: 'weekday 1', 2: 'weekday 2', 3: 'weekday 3', 4: 'weekday 4', 5: 'weekday 5', 6: 'weekday 6', 7: 'weekday 7', 8: 'weekday 8'}
+      smonthnames: {
+        bsp: 'nozoþu', esp: 'nozošau',
+        bsu: 'masojažeþu', esu: 'masojažšau',
+        bhr: 'lačejoþu', ehr: 'lačejošau',
+        bwr: 'duðyþu', ewr: 'duðyšau'
+      },
+      lmonthnames: {
+        1: 'water moon', 2: 'flower moon', 3: 'fire moon', 4: 'tree moon',
+        5: 'sky moon', 6: 'fog moon', 7: 'lightning moon', 8: 'thunder moon',
+        9: 'wind moon', 10: 'middle moon', 11: 'story moon', 12: 'battle moon',
+        13: 'bright moon', 14: 'dark moon', 15: 'blue moon', 16: 'mountain moon',
+        17: 'cave moon', 18: 'stone moon', 19: 'gold moon', 20: 'short moon'
+      },
+      lwdaynames:  {
+        1: 'weekday 1', 2: 'weekday 2', 3: 'weekday 3', 4: 'weekday 4',
+        5: 'weekday 5', 6: 'weekday 6', 7: 'weekday 7', 8: 'weekday 8'
+      }
     },
     plan: {
       featuresheader: 'Our planned features include:',
@@ -113,9 +127,23 @@ const languages = {
     clock: {
       title: '',
       clockfacealt: 'clockface',
-      smonthnames: {bsp: '', esp: '', bsu: '', esu: '', bhr: '', ehr: '', bwr: '', ewr: ''},
-      lmonthnames: {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: '', 10: '', 11: '', 12: '', 13: '', 14: '', 15: '', 16: '', 17: '', 18: '', 19: '', 20: ''},
-      lwdaynames: {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: ''}
+      smonthnames: {
+        bsp: '', esp: '',
+        bsu: '', esu: '',
+        bhr: '', ehr: '',
+        bwr: '', ewr: ''
+      },
+      lmonthnames: {
+        1: '', 2: '', 3: '', 4: '',
+        5: '', 6: '', 7: '', 8: '',
+        9: '', 10: '', 11: '', 12: '',
+        13: '', 14: '', 15: '', 16: '',
+        17: '', 18: '', 19: '', 20: ''
+      },
+      lwdaynames: {
+        1: '', 2: '', 3: '', 4: '',
+        5: '', 6: '', 7: '', 8: ''
+      }
     },
     plan: {
       featuresheader: '   ',
