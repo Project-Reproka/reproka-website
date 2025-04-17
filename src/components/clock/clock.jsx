@@ -48,7 +48,7 @@ export default function Clock({language}) {
         [gettext("clock.smonthnames.ehr", language)],
         [gettext("clock.smonthnames.bwr", language)],
         [gettext("clock.smonthnames.ewr", language)]
-      ];
+      ]
 
       const lunarNames = [
         [gettext("clock.lmonthnames.1", language)],
@@ -71,7 +71,8 @@ export default function Clock({language}) {
         [gettext("clock.lmonthnames.18", language)],
         [gettext("clock.lmonthnames.19", language)],
         [gettext("clock.lmonthnames.20", language)]
-      ];
+      ]
+
       const weekdays = [
         [gettext("clock.lwdaynames.1", language)],
         [gettext("clock.lwdaynames.2", language)],
@@ -81,21 +82,13 @@ export default function Clock({language}) {
         [gettext("clock.lwdaynames.6", language)],
         [gettext("clock.lwdaynames.7", language)],
         [gettext("clock.lwdaynames.8", language)]
-      ];
-      var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall, base; 
-      console.log(language)
-      base = gettext('general.numberbase', language)
-      if (language == 3) {
-        meals_in_day = 0o20;
-        talks_in_meal = 0o12;
-        longfalls_in_talk = 0o30;
-        stonefalls_in_longfall = 0o40;
-      } else {
-        meals_in_day = 15;
-        talks_in_meal = 8;
-        longfalls_in_talk = 20;
-        stonefalls_in_longfall = 50;
-      }
+      ]
+
+      var base = gettext('general.numberbase', language)
+      var meals_in_day = 15
+      var talks_in_meal = 8
+      var longfalls_in_talk = 20
+      var stonefalls_in_longfall = 50
       
       const meal = Math.floor(daysec / (sec_in_day / meals_in_day));
       const mealsec = daysec % (sec_in_day / meals_in_day);
@@ -104,20 +97,24 @@ export default function Clock({language}) {
       const longfall = Math.floor(talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk));
       const longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
       const stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
+
       setDate({
         seasonal: `${(remainingDays + 1).toString(base)} ${seasonNames[seasonalMonth]}, ${seasonalYear.toString(base)}`,
         lunar: `${dayInLunarMonth.toString(base)} ${lunarNames[lunarMonth]}`,
         time: `${String(meal.toString(base)).padStart(2, '0')}:${talk.toString(base)}:${String(longfall.toString(base)).padStart(2, '0')}:${String(Math.floor(stonefall).toString(base)).padStart(2, '0')}`
-      });
-    };
-    updateDate();
+      })
+    }
+
+    updateDate()
+
     const interval = setInterval(updateDate, 50)
     return () => clearInterval(interval)
   }, [language])
 
   return (
     <div>
-      <Image src="/resources/images/clock_face/clock-decimal.svg" width={100} height={100} alt='clokc face'></Image>
+      {/*<Image src="/resources/images/clockfaces/clock-decimal.svg" width={100} height={100} alt={gettext('clock.cloclfacealt', language)} />*/}
+      
       <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal}</p>
       <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
     </div>
