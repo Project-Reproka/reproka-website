@@ -8,7 +8,22 @@ import Image from 'next/image'
 export default function Clock({ language }) {
   const [date, setDate] = useState({ seasonal: "", lunar: "", time: "", meal: 0, talk: 0, mid: 0, tim: 0 })
 
+  function getPointOnCircle(centerx, centery, radius, deg) {
+    deg -= 90
+
+    var rad = deg * (Math.PI / 180) // radian-ifier
+
+    var xpos = centerx + radius * Math.cos(rad)
+    var ypos = centery + radius * Math.sin(rad)
+
+    return { xpos, ypos }
+  }
+
   useEffect(() => {
+    var canvas = document.getElementById('clockhands')
+    var ctx = canvas.getContext('2d')
+    ctx.lineWidth = 4
+
     const updateDate = () => {
       const sec_in_day = 84500;
       const daysPerLunarMonth = 16;
@@ -87,17 +102,19 @@ export default function Clock({ language }) {
 
       var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall;
       var base = gettext('general.numberbase', language)
+
       if (base == 8) {
-        meals_in_day = 0o20;
-        talks_in_meal = 0o12;
-        longfalls_in_talk = 0o30;
-        stonefalls_in_longfall = 0o40;
+        meals_in_day = 0o20
+        talks_in_meal = 0o12
+        longfalls_in_talk = 0o30
+        stonefalls_in_longfall = 0o40
       } else if (base == 10) {
         var meals_in_day = 15
         var talks_in_meal = 8
         var longfalls_in_talk = 20
         var stonefalls_in_longfall = 50
       }
+
       var meal = Math.floor(daysec / (sec_in_day / meals_in_day));
       var mealsec = daysec % (sec_in_day / meals_in_day);
       var talk = Math.floor(mealsec / (sec_in_day / meals_in_day / talks_in_meal));
@@ -112,53 +129,40 @@ export default function Clock({ language }) {
         time: `${String(meal.toString(base)).padStart(2, '0')}:${talk.toString(base)}:${String(longfall.toString(base)).padStart(2, '0')}:${String(Math.floor(stonefall).toString(base)).padStart(2, '0')}`,
         meal: meal,
         talk: talk,
+        long: longfall,
         mid:  meals_in_day,
-        tim:  talks_in_meal
+        tim:  talks_in_meal,
+        lit: longfalls_in_talk
       })
 
-      updatehands()
-    }
-
-    function getPointOnCircle(centerx, centery, radius, deg) {
-      deg -= 90
-
-      var rad = deg * (Math.PI / 180) // radian-ifier
-
-      var xpos = centerx + radius * Math.cos(rad)
-      var ypos = centery + radius * Math.sin(rad)
-
-      return { xpos, ypos }
-    }
-
-    var canvas = document.getElementById('clockhands')
-    var ctx = canvas.getContext('2d')
-    ctx.lineWidth = 4
-
-    function updatehands() {
-      var pos1 = getPointOnCircle(140, 140, 100, (date.talk / date.tim) * 360)
-      var pos2 = getPointOnCircle(140, 140, 80, (date.meal / date.mid) * 360)
+      var pos1 = getPointOnCircle(140, 140, 100, (talk / talks_in_meal) * 360)
+      var pos2 = getPointOnCircle(140, 140, 80, (meal / meals_in_day) * 360)
+      var pos3 = getPointOnCircle(140, 140, 80, (longfall / longfalls_in_talk) * 360)
 
       ctx.clearRect(0, 0, 280, 280)
-      console.log(date.meal, date.talk)
 
-      setTimeout(() => {
-        ctx.strokeStyle = '#ff3311'
-        ctx.beginPath()
-        ctx.moveTo(140, 140)
-        ctx.lineTo(pos1.xpos, pos1.ypos)
-        ctx.stroke()
+      ctx.strokeStyle = '#ff3311'
+      ctx.beginPath()
+      ctx.moveTo(140, 140)
+      ctx.lineTo(pos1.xpos, pos1.ypos)
+      ctx.stroke()
 
-        ctx.strokeStyle = '#ffffff'
-        ctx.beginPath()
-        ctx.moveTo(140, 140)
-        ctx.lineTo(pos2.xpos, pos2.ypos)
-        ctx.stroke()
-      }, 125)
+      ctx.strokeStyle = '#ffffff'
+      ctx.beginPath()
+      ctx.moveTo(140, 140)
+      ctx.lineTo(pos2.xpos, pos2.ypos)
+      ctx.stroke()
+
+      ctx.strokeStyle = '#aaaaaa'
+      ctx.beginPath()
+      ctx.moveTo(140, 140)
+      ctx.lineTo(pos3.xpos, pos3.ypos)
+      ctx.stroke()
     }
 
     updateDate()
 
-    const int = setInterval(updateDate, 500)
+    const int = setInterval(updateDate, 50)
     return () => clearInterval(int)
   }, [language])
   
