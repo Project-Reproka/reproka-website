@@ -135,27 +135,27 @@ export default function Clock({ language }) {
         lit: longfalls_in_talk
       })
 
-      var pos1 = getPointOnCircle(140, 140, 100, (talk / talks_in_meal) * 360)
-      var pos2 = getPointOnCircle(140, 140, 133, (meal / meals_in_day) * 360)
-      var pos3 = getPointOnCircle(140, 140, 67, (longfall / longfalls_in_talk) * 360)
+      var pos1 = getPointOnCircle(210, 210, 150, (talk / talks_in_meal) * 360)
+      var pos2 = getPointOnCircle(210, 210, 200, (meal / meals_in_day) * 360)
+      var pos3 = getPointOnCircle(210, 210, 100, (longfall / longfalls_in_talk) * 360)
 
-      ctx.clearRect(0, 0, 280, 280)
+      ctx.clearRect(0, 0, 420, 420)
 
       ctx.strokeStyle = '#5599ff'
       ctx.beginPath()
-      ctx.moveTo(140, 140)
+      ctx.moveTo(210, 210)
       ctx.lineTo(pos1.xpos, pos1.ypos)
       ctx.stroke()
 
       ctx.strokeStyle = '#ff8080'
       ctx.beginPath()
-      ctx.moveTo(140, 140)
+      ctx.moveTo(210, 210)
       ctx.lineTo(pos2.xpos, pos2.ypos)
       ctx.stroke()
 
       ctx.strokeStyle = '#44aa00'
       ctx.beginPath()
-      ctx.moveTo(140, 140)
+      ctx.moveTo(210, 210)
       ctx.lineTo(pos3.xpos, pos3.ypos)
       ctx.stroke()
     }
@@ -169,9 +169,9 @@ export default function Clock({ language }) {
   
   return (
     <div className="flex flex-col gap-8">
-      <div className="relative h-[280px] w-[280px]">
-        <Image className="absolute top-0 left-0" src={'/resources/images/clockfaces/' + (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '-clockface.svg'} width={280} height={280} alt={gettext('clock.clockfacealt', language)} />
-        <canvas className="absolute top-0 left-0" id="clockhands" width={280} height={280} />
+      <div className="relative h-[420px] w-[420px]">
+        <Image className="absolute top-0 left-0" src={'/resources/images/clockfaces/' + (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '-clockface.svg'} width={420} height={420} alt={gettext('clock.clockfacealt', language)} />
+        <canvas className="absolute top-0 left-0" id="clockhands" width={420} height={420} />
       </div>
 
       <div>
