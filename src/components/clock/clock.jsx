@@ -121,12 +121,16 @@ export default function Clock({ language }) {
       }
 
       var meal = Math.floor(daysec / (sec_in_day / meals_in_day));
+      var mealdec = daysec / (sec_in_day / meals_in_day); // decimal
       var mealsec = daysec % (sec_in_day / meals_in_day);
       var talk = Math.floor(mealsec / (sec_in_day / meals_in_day / talks_in_meal));
+      var talkdec = mealsec / (sec_in_day / meals_in_day / talks_in_meal); // decimal
       var talksec = mealsec % (sec_in_day / meals_in_day / talks_in_meal);
       var longfall = Math.floor(talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk));
+      var longfalldec = talksec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk); // decimal
       var longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
       var stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
+      var stonefalldec = longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall); // decimal
 
       setDate({
         seasonal: `${(remainingDays + 1).toString(base)} ${seasonNames[seasonalMonth]}, ${seasonalYear.toString(base)}`,
@@ -140,9 +144,9 @@ export default function Clock({ language }) {
         lit: longfalls_in_talk
       })
 
-      var pos1 = getPointOnCircle(210, 210, 150, (talk / talks_in_meal) * 360)
-      var pos2 = getPointOnCircle(210, 210, 200, (meal / meals_in_day) * 360)
-      var pos3 = getPointOnCircle(210, 210, 100, (longfall / longfalls_in_talk) * 360)
+      var pos1 = getPointOnCircle(210, 210, 150, (talkdec / talks_in_meal) * 360)
+      var pos2 = getPointOnCircle(210, 210, 200, (mealdec / meals_in_day) * 360)
+      var pos3 = getPointOnCircle(210, 210, 100, (longfalldec / longfalls_in_talk) * 360)
 
       ctx.clearRect(0, 0, 420, 420)
 
