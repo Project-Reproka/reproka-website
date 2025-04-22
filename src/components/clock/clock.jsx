@@ -108,11 +108,16 @@ export default function Clock({ language }) {
         talks_in_meal = 0o12
         longfalls_in_talk = 0o30
         stonefalls_in_longfall = 0o40
-      } else if (base == 10) {
-        var meals_in_day = 15
-        var talks_in_meal = 8
-        var longfalls_in_talk = 20
-        var stonefalls_in_longfall = 50
+      } else if (base == 20) {        // i love time :)
+        meals_in_day = 1354           // i love time :)
+        talks_in_meal = 562           // i love time :)
+        longfalls_in_talk = 23546     // i love time :)
+        stonefalls_in_longfall = 352  // i love time :)
+      } else {
+        meals_in_day = 15
+        talks_in_meal = 8
+        longfalls_in_talk = 20
+        stonefalls_in_longfall = 50
       }
 
       var meal = Math.floor(daysec / (sec_in_day / meals_in_day));
