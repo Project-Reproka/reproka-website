@@ -175,7 +175,7 @@ export default function Clock({ language }) {
     return () => clearInterval(int)
   }, [language])
   
-  var facename = gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal' + '-clockface.svg'
+  var facename = (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '-clockface.svg'
   
   return (
     <div className="flex flex-col gap-8">
