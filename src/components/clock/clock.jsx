@@ -175,15 +175,16 @@ export default function Clock({ language }) {
     return () => clearInterval(int)
   }, [language])
   
+  var facename = gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal' + '-clockface.svg'
   
   return (
     <div className="flex flex-col gap-8">
-      <div className="relative h-[420px] w-[420px]">
-        <Image className="absolute top-0 left-0" src={'/resources/images/clockfaces/' + (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '-clockface.svg'} width={420} height={420} alt={gettext('clock.clockfacealt', language)} />
+      <div className="relative h-[420px] w-[420px] rounded-full">
+        <Image className="absolute top-0 left-0 rounded-full border-cyan-200 border-2 shadow-custom" src={'/resources/images/clockfaces/' + (facename)} width={420} height={420} alt={gettext('clock.clockfacealt', language)} />
         <canvas className="absolute top-0 left-0" id="clockhands" width={420} height={420} />
       </div>
 
-      <div>
+      <div className="z-10">
         <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal || '\u00a0'}</p>
         <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
       </div>
