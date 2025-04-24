@@ -6,6 +6,12 @@ const languages = {
       numberbase: 10
     },
     navbar: {
+      langswitch: {
+        select: 'Select',
+        saveexit: 'Save & Exit',
+        langs: 'Languages',
+        changelang: 'Change Language'
+      },
       copyright: '© Project Reproka 2025',
       headertext: 'Project Reproka',
       home: 'Home',
@@ -107,6 +113,12 @@ const languages = {
       numberbase: 8
     },
     navbar: {
+      langswitch: {
+        select: 'Selec progazat this one needs changing',
+        saveexit: 'Save & progazaExit this one needs changing',
+        langs: 'Languagprogazaesthis one needs changing',
+        changelang: 'Change Laprogazanguagethis one needs changing'
+      },
       copyright: '[]  ',
       headertext: '',
       home: '',
