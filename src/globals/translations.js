@@ -100,13 +100,13 @@ const languages = {
       }
     }
   },
-  'Spanish': {
+  'Español': {
     // todo
   },
-  'German': {
+  'Deutsch': {
     // todo
   },
-  'Progaza (North Valley/Capital)': {
+  '    ': {
     general: {
       projectname: '',
       planetname: '',
@@ -114,12 +114,12 @@ const languages = {
     },
     navbar: {
       langswitch: {
-        select: 'Select',
-        saveexit: 'Save & Exit',
-        langs: 'Languages',
-        changelang: 'Change Language'
+        select: '',
+        saveexit: '   ',
+        langs: '',
+        changelang: ' '
       },
-      copyright: '[]  ',
+      copyright: '  ',
       headertext: '',
       home: '',
       clock: '',
@@ -210,18 +210,18 @@ const languages = {
   'Reska': {
     // todo
   },
-  'Thassian': {
+  'tasi': {
     // todo
   },
-  'Kokos': {
+  'kōkos kas': {
     // todo
   },
-  'Xorgara': {
+  'Xorǧara': {
     general: {
       numberbase: 20
     }
   },
-  'Tolema': {
+  'Takekava': {
     // todo
   }
 }
