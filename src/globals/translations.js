@@ -114,10 +114,10 @@ const languages = {
     },
     navbar: {
       langswitch: {
-        select: 'Selec progazat this one needs changing',
-        saveexit: 'Save & progazaExit this one needs changing',
-        langs: 'Languagprogazaesthis one needs changing',
-        changelang: 'Change Laprogazanguagethis one needs changing'
+        select: 'Select',
+        saveexit: 'Save & Exit',
+        langs: 'Languages',
+        changelang: 'Change Language'
       },
       copyright: '[]  ',
       headertext: '',
