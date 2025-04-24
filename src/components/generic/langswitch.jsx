@@ -35,7 +35,7 @@ export default function LangSwitch({ setlg, language }) {
       </span>
 
       <div className="fixed flex items-center justify-center top-0 left-0 z-20 w-full h-full bg-[#000000aa] text-white" style={{display: (open ? 'flex' : 'none')}}>
-        <div className="w-1/2 backdrop-blur-md bg-[#0b0b1433] p-8 rounded-3xl border-[#303053] border flex flex-col gap-8">
+        <div className="w-1/2 backdrop-blur-md bg-[#0b0b1455] p-8 rounded-3xl border-[#303053] border flex flex-col gap-8">
           <div className="w-full h-12 flex items-center justify-between text-2xl">
             <span>{gettext('navbar.langswitch.langs', language)}</span>
 
@@ -44,7 +44,7 @@ export default function LangSwitch({ setlg, language }) {
             </button>
           </div>
 
-          <div className="w-full h-[350px] flex flex-col gap-2 overflow-scroll">
+          <div className="w-full h-[350px] p-3 flex flex-col gap-2 overflow-y-scroll rounded-l-md border-[#303053] border">
             {langlist.map(item => 
               <LangSwitchListItm key={langlist.indexOf(item)} language={language} item={item} selected={selected == langlist.indexOf(item)} select={setSelected} />
             )}

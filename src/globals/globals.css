@@ -21,4 +21,5 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Yrigakesha', sans-serif;
+  scrollbar-color: #56568b #0b0b14;
 }
