@@ -22,6 +22,7 @@ export default function LangSwitch({ setlg, language }) {
 
   function handleopen() {
     setOpen(true)
+    setSelected(language)
   }
 
   useEffect(() => {
