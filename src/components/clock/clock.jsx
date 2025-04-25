@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { gettext } from '@/globals/translations'
+import { gettext, getnumber } from '@/globals/translations'
 import Image from 'next/image'
 
 
@@ -25,6 +25,8 @@ export default function Clock({ language }) {
     ctx.lineWidth = 4
 
     const updateDate = () => {
+      // for now this system does not respect any other systems, might implement that later idk
+      // what i will do now though is figure out how to use the custom numbers that some languages have instead of the hindi-arabic numbers
       const sec_in_day = 84500;
       const daysPerLunarMonth = 16;
       const seasonalMonthPattern = [42, 43, 42, 42, 43, 42, 42, 42];
@@ -51,7 +53,7 @@ export default function Clock({ language }) {
       }
 
       // ---  Lunar Calendar Calculation ---
-      // me when chatgpt code real
+      // me when chatgpt code real (it sucks)
       const lunarMonth = Math.floor(elapsedDays / daysPerLunarMonth) % 20; // 20-month repeating cycle
       const dayInLunarMonth = (elapsedDays % daysPerLunarMonth) + 1;
 
@@ -102,13 +104,13 @@ export default function Clock({ language }) {
 
       var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall;
       var base = gettext('general.numberbase', language)
-
+      
       if (base == 8) {
         meals_in_day = 0o20
         talks_in_meal = 0o12
         longfalls_in_talk = 0o30
         stonefalls_in_longfall = 0o40
-      } else if (base == 20) {        // i love time :)
+      } else if (base == 20) {        // i love time :) NOTE this is a PLACEHOLDER please get time stuff from zora ASAP
         meals_in_day = 1354           // i love time :)
         talks_in_meal = 562           // i love time :)
         longfalls_in_talk = 23546     // i love time :)
@@ -131,11 +133,11 @@ export default function Clock({ language }) {
       var longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
       var stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
       var stonefalldec = longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall); // decimal
-
+      var zero = gettext('general.numbers.0', language)
       setDate({
-        seasonal: `${(remainingDays + 1).toString(base)} ${seasonNames[seasonalMonth]}, ${seasonalYear.toString(base)}`,
-        lunar: `${dayInLunarMonth.toString(base)} ${lunarNames[lunarMonth]}`,
-        time: `${String(meal.toString(base)).padStart(2, '0')}:${talk.toString(base)}:${String(longfall.toString(base)).padStart(2, '0')}:${String(Math.floor(stonefall).toString(base)).padStart(2, '0')}`,
+        seasonal: `${getnumber((remainingDays + 1), language)} ${seasonNames[seasonalMonth]}, ${getnumber(seasonalYear, language)}`,
+        lunar: `${getnumber(dayInLunarMonth, language)} ${lunarNames[lunarMonth]}`,
+        time: `${String(getnumber(meal, language)).padStart(2, zero)}:${getnumber(talk, language)}:${String(getnumber(longfall,language)).padStart(2, zero)}:${String(getnumber(Math.floor(stonefall), language)).padStart(2, zero)}`,
         meal: meal,
         talk: talk,
         long: longfall,

@@ -3,7 +3,10 @@ const languages = {
     general: {
       projectname: 'Project Reproka',
       planetname: 'Reproka',
-      numberbase: 10
+      numberbase: 10,
+      numbers: {
+        0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+      }
     },
     navbar: {
       langswitch: {
@@ -110,7 +113,10 @@ const languages = {
     general: {
       projectname: '',
       planetname: '',
-      numberbase: 8
+      numberbase: 8,
+      numbers: {
+        0: "", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: ""
+      }
     },
     navbar: {
       langswitch: {
@@ -261,12 +267,15 @@ function get(thing, lang) {
   }
 }
 
-function number(num, lang) {
-  if (lang == 3) { // progaza, octal
-    return num.toString(8)
-  } else {
-    return num.toString()
-  }
+function getnum(num, lang) {
+  var numstr = num.toString(get('general.numberbase', lang)) // convert to whatever base the language uses
+  var thing = numstr.split(""); // split the number into individual characters
+  var other = ""; // IT'S THE oh
+  thing.forEach(number => {
+    other += get(`general.numbers.${number}`, lang); // get the number from the language, translate it, then add it to the thingy mabob
+  });
+  
+  return other
 }
 
-module.exports = { langlist: langlist, gettext: get, numconv: number }
+module.exports = { langlist: langlist, gettext: get, getnumber: getnum }
