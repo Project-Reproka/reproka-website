@@ -8,6 +8,7 @@ import LangSwitchListItm from '@/components/generic/langswitchlistitm'
 export default function LangSwitch({ setlg, language }) {
   const [selected, setSelected] = useState(0)
   const [open, setOpen] = useState(false)
+  const [list, setList] = useState(langlist)
 
   function handlechange(e) {
     setlg(selected)
@@ -25,6 +26,18 @@ export default function LangSwitch({ setlg, language }) {
     setSelected(language)
   }
 
+  function handlequery(e) {
+    var l = []
+
+    langlist.forEach(item => {
+      if (item.toLowerCase().includes(e.target.value.toLowerCase())) {
+        l.push(item)
+      }
+    })
+
+    setList(l)
+  }
+
   useEffect(() => {
     setSelected(language)
   }, [language])
@@ -37,7 +50,7 @@ export default function LangSwitch({ setlg, language }) {
 
       <div className="fixed flex items-center justify-center top-0 left-0 z-20 w-full h-full bg-[#000000aa] text-white" style={{display: (open ? 'flex' : 'none')}}>
         <div className="w-1/2 backdrop-blur-md bg-[#0b0b1455] p-8 rounded-3xl border-[#303053] border flex flex-col gap-8">
-          <div className="w-full h-12 flex items-center justify-between text-2xl">
+          <div className="w-full h-12 flex items-center justify-between text-3xl">
             <span>{gettext('navbar.langswitch.langs', language)}</span>
 
             <button className="w-12 h-12 rounded-xl text-center bg-[rgba(127,127,255,10%)]" onClick={handleclose}>
@@ -45,8 +58,10 @@ export default function LangSwitch({ setlg, language }) {
             </button>
           </div>
 
-          <div className="w-full h-[350px] p-3 flex flex-col gap-2 overflow-y-scroll rounded-l-md border-[#303053] border">
-            {langlist.map(item => 
+          <input className="w-full h-12 text-lg rounded-xl p-2 px-4 bg-[rgba(127,127,255,10%)]" placeholder={gettext('navbar.langswitch.search', language)} type="text" onChange={handlequery} />
+
+          <div className="w-full h-[350px] text-xl p-3 flex flex-col gap-2 overflow-y-scroll rounded-l-md border-[#303053] border">
+            {list.map(item => 
               <LangSwitchListItm key={langlist.indexOf(item)} language={language} item={item} selected={selected == langlist.indexOf(item)} select={setSelected} />
             )}
           </div>

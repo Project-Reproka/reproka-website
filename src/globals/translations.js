@@ -13,7 +13,8 @@ const languages = {
         select: 'Select',
         saveexit: 'Save & Exit',
         langs: 'Languages',
-        changelang: 'Change Language'
+        changelang: 'Change Language',
+        search: 'Search languages...'
       },
       copyright: '© Project Reproka 2025',
       headertext: 'Project Reproka',
@@ -273,17 +274,18 @@ function get(thing, lang) {
 
 function getnum(num, lang) {
   var numstr = num.toString(get('general.numberbase', lang)) // convert to whatever base the language uses
-  var thing = numstr.split(""); // split the number into individual characters
-  var other = ""; // IT'S THE oh
+  var thing = numstr.split("") // split the number into individual characters
+  var other = "" // IT'S THE oh
+
   thing.forEach(number => {
     if (number == '.') {
-      other += get('general.decimalsep', lang); // add the decimal point so it doesn't complain
-    } else if (number == "-") {
-      other += get('general.negnum', lang); // add the negative sign so it doesn't complain
+      other += get('general.decimalsep', lang) // add the decimal point so it doesn't complain
+    } else if (number == '-') {
+      other += get('general.negnum', lang) // add the negative sign so it doesn't complain
     } else {
-      other += get(`general.numbers.${number}`, lang); // get the number from the language, translate it, then add it to the thingy mabob
+      other += get(`general.numbers.${number}`, lang) // get the number from the language, translate it, then add it to the thingy mabob
     }
-  });
+  })
   
   return other
 }
