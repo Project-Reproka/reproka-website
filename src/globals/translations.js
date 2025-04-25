@@ -4,9 +4,9 @@ const languages = {
       projectname: 'Project Reproka',
       planetname: 'Reproka',
       numberbase: 10,
-      numbers: {
-        0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
-      }
+      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"},
+      decimalsep: '.',
+      negnum: '-'
     },
     navbar: {
       langswitch: {
@@ -116,7 +116,9 @@ const languages = {
       numberbase: 8,
       numbers: {
         0: "", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: ""
-      }
+      },
+      decimalsep: '',
+      negnum: ''
     },
     navbar: {
       langswitch: {
@@ -224,8 +226,10 @@ const languages = {
   },
   'Xorǧara': {
     general: {
-      numberbase: 20
-    }
+      numberbase: 20,
+      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9", a: "A", b: "B", c: "C", d: "D", e: "E", f: "F", g: "G", h: "H", i: "I", j: "J"}
+    },
+    
   },
   'Takekava': {
     // todo
@@ -272,7 +276,13 @@ function getnum(num, lang) {
   var thing = numstr.split(""); // split the number into individual characters
   var other = ""; // IT'S THE oh
   thing.forEach(number => {
-    other += get(`general.numbers.${number}`, lang); // get the number from the language, translate it, then add it to the thingy mabob
+    if (number == '.') {
+      other += get('general.decimalsep', lang); // add the decimal point so it doesn't complain
+    } else if (number == "-") {
+      other += get('general.negnum', lang); // add the negative sign so it doesn't complain
+    } else {
+      other += get(`general.numbers.${number}`, lang); // get the number from the language, translate it, then add it to the thingy mabob
+    }
   });
   
   return other

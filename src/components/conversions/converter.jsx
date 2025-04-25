@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { gettext } from '@/globals/translations'
+import { gettext, getnumber } from '@/globals/translations'
 
 export default function Converter({ units, language }) {
   const [selected, setSelected] = useState('none') // selected unit group
@@ -73,7 +73,7 @@ export default function Converter({ units, language }) {
       </div>
 
       <button className="w-full bg-[rgba(127,127,255,10%)] px-4 py-2 rounded-lg shadow-custom" onClick={handleButtonClick}>{gettext('conversions.convertbtn', language)}</button>
-      <span className="w-full bg-[rgba(127,127,255,10%)] px-4 py-2 rounded-lg shadow-custom">{gettext('conversions.result', language)} {result ? result : '---'}</span>
+      <span className="w-full bg-[rgba(127,127,255,10%)] px-4 py-2 rounded-lg shadow-custom">{gettext('conversions.result', language)} {result ? getnumber(result, language) : '---'}</span>
     </div>
   )
 }

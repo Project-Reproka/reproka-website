@@ -114,7 +114,7 @@ export default function Clock({ language }) {
         meals_in_day = 1354           // i love time :)
         talks_in_meal = 562           // i love time :)
         longfalls_in_talk = 23546     // i love time :)
-        stonefalls_in_longfall = 352  // i love time :)
+        stonefalls_in_longfall = 3523  // i love time :)
       } else {
         meals_in_day = 15
         talks_in_meal = 8
