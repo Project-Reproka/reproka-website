@@ -126,7 +126,8 @@ const languages = {
         select: '',
         saveexit: '   ',
         langs: '',
-        changelang: ' '
+        changelang: ' ',
+        search: ' '
       },
       copyright: '  ',
       headertext: '',
