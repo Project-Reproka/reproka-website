@@ -5,20 +5,26 @@ import LangSwitch from '@/components/generic/langswitch'
 
 export default function Navbar({ language, setlg }) {
   return (
-    <div className="w-[400px] py-4 flex flex-col justify-between min-h-screen bg-[#0b0b14]">
-      <span className="text-2xl">{gettext('navbar.headertext', language)}</span>
+    <div className="min-h-full">
+      <div className="w-[350px] h-screen" />
 
-      <div className="flex flex-col gap-2 pr-4">
-        <NavButton language={language} link={'/'} icon={'home-6.svg'} content={gettext('navbar.home', language)} />
-        <NavButton language={language} link={'/clock'} icon={'time-18.svg'} content={gettext('navbar.clock', language)} />
-        <NavButton language={language} link={'/unit-conversions'} icon={'cursor-16.svg'} content={gettext('navbar.conversions', language)} />
-        <NavButton language={language} link={'/feature-plan'} icon={'calendar-9.svg'} content={gettext('navbar.featureplan', language)} />
-      </div>
+      <div className="fixed top-0 left-0">
+        <div className="w-[350px] py-4 flex flex-col justify-between h-screen bg-[#0b0b14]">
+          <span className="text-2xl">{gettext('navbar.headertext', language)}</span>
 
-      <div className="w-full flex flex-col gap-4 items-center">
-        <LangSwitch setlg={setlg} language={language} />
+          <div className="flex flex-col gap-2 pr-4">
+            <NavButton language={language} link={'/'} icon={'home-6.svg'} content={gettext('navbar.home', language)} />
+            <NavButton language={language} link={'/clock'} icon={'time-18.svg'} content={gettext('navbar.clock', language)} />
+            <NavButton language={language} link={'/unit-conversions'} icon={'cursor-16.svg'} content={gettext('navbar.conversions', language)} />
+            <NavButton language={language} link={'/feature-plan'} icon={'calendar-9.svg'} content={gettext('navbar.featureplan', language)} />
+          </div>
 
-        <span>{gettext('navbar.copyright', language)}</span>
+          <div className="w-full flex flex-col gap-4 items-center">
+            <LangSwitch setlg={setlg} language={language} />
+
+            <span>{gettext('navbar.copyright', language)}</span>
+          </div>
+        </div>
       </div>
     </div>
   )

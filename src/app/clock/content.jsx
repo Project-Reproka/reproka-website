@@ -18,7 +18,8 @@ export default function ClockContent() {
   return (
     <div className="min-h-screen w-full flex flex-row items-center text-center">
       <Navbar language={language} setlg={setLanguage} />
-      <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-6 min-h-screen">
+
+      <div className="h-full w-full flex flex-col items-center justify-center gap-9 text-center px-3 py-16 min-h-screen">
         <span className="text-6xl z-10" style={{textShadow:'0px 0px 50px #ffffff44'}}>{gettext('clock.title', language)}</span>
   
         <Clock language={language} />
