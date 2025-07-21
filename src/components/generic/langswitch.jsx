@@ -48,8 +48,8 @@ export default function LangSwitch({ setlg, language }) {
         {langlist[language]}
       </span>
 
-      <div className="fixed flex items-center justify-center top-0 left-0 z-20 w-full h-full bg-[#000000aa] text-white" style={{display: (open ? 'flex' : 'none')}}>
-        <div className="w-1/2 backdrop-blur-md bg-[#0b0b1455] p-8 rounded-3xl border-[#303053] border flex flex-col gap-8">
+      <div className="fixed flex items-center justify-center top-0 left-0 w-screen h-screen bg-[#000000aa] text-white" style={{display: (open ? 'flex' : 'none')}}>
+        <div className="w-5/6 md:w-1/2 h-2/3 md:h-5/6 mb-10 md:mb-0 backdrop-blur-md bg-[#0b0b1455] p-8 rounded-3xl border-[#303053] border flex flex-col gap-8">
           <div className="w-full h-12 flex items-center justify-between text-3xl">
             <span>{gettext('navbar.langswitch.langs', language)}</span>
 
@@ -66,7 +66,7 @@ export default function LangSwitch({ setlg, language }) {
             )}
           </div>
 
-          <button className="w-full h-12 rounded-xl text-center bg-[rgba(127,127,255,10%)]" onClick={handlechange}>{gettext('navbar.langswitch.saveexit', language)}</button>
+          <button className="w-full h-12 py-2 rounded-xl text-center bg-[rgba(127,127,255,10%)]" onClick={handlechange}>{gettext('navbar.langswitch.saveexit', language)}</button>
         </div>
       </div>
 

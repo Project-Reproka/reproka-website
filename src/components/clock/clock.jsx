@@ -181,7 +181,7 @@ export default function Clock({ language }) {
   
   return (
     <div className="flex flex-col gap-8">
-      <div className="relative h-[420px] w-[420px] rounded-full">
+      <div className="relative h-[420px] w-[420px] rounded-full scale-75 md:scale-100">
         <Image className="absolute top-0 left-0 rounded-full border-cyan-200 border-2 shadow-custom" src={'/resources/images/clockfaces/' + (facename)} width={420} height={420} alt={gettext('clock.clockfacealt', language)} />
         <canvas className="absolute top-0 left-0" id="clockhands" width={420} height={420} />
       </div>
