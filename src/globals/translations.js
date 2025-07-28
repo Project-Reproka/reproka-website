@@ -110,7 +110,7 @@ const languages = {
   'Deutsch': {
     // todo
   },
-  '    ': {
+  '    ': { // this doesnt exist anymore, keeping for testing
     general: {
       projectname: '',
       planetname: '',
@@ -217,6 +217,9 @@ const languages = {
       }
     }
   },
+  'Þamon': {
+    // todo
+  },
   'Reska': {
     // todo
   },
@@ -227,18 +230,7 @@ const languages = {
     // todo
   },
   'Xorǧara': {
-    general: {
-      numberbase: 20,
-      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9", a: "A", b: "B", c: "C", d: "D", e: "E", f: "F", g: "G", h: "H", i: "I", j: "J"}
-    },
-    navbar: {
-      copyright: '© Errökejü Anıb 2025',
-      headertext: 'Errökejü Anıb',
-      clock: 'Toq',
-      conversions: 'Isçunaju Nanarlona',
-      featureplan: 'Qıyoça Dıda',
-      btnalt: 'Behe'
-    }
+    // todo
   },
   'Takekava': {
     // todo
