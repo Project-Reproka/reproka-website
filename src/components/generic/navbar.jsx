@@ -18,7 +18,7 @@ export default function Navbar({ language, setlg }) {
     <div className="min-h-full z-20">
       <div className="w-[350px] h-screen hidden md:block" />
 
-      <div className={'fixed top-0 md:left-0 drop-shadow-[20px_-10px_20px_rgba(0,0,0,.75)] md:drop-shadow-none transition-transform -left-[350px] ' + (open ? 'translate-x-[350px]' : '')}>
+      <div className={'fixed top-0 md:left-0 drop-shadow-[20px_-10px_20px_rgba(0,0,0,.75)] md:drop-shadow-none transition-transform -left-[400px] ' + (open ? 'translate-x-[400px]' : '')}>
         <div className="w-[350px] py-4 flex flex-col justify-between h-screen bg-[#0b0b14]">
           <span className="text-2xl">{gettext('navbar.headertext', language)}</span>
 
