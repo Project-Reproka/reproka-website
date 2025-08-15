@@ -24,10 +24,10 @@ export default function ConversionsContent() {
       [gettext('conversions.length.kmeter', language), 1000],
       [gettext('conversions.length.mmeter', language), 0.001],
       [gettext('conversions.length.seijagemil', language), 0.1032275],
-      [gettext('conversions.length.kaibroza', language), 1.032275],
-      [gettext('conversions.length.omstaz', language), 10.32275],
-      [gettext('conversions.length.lidhchazerun', language), 1032.275],
-      [gettext('conversions.length.chazerun', language), 10322.75]
+      [gettext('conversions.length.kaibroza', language), 0.82582],
+      [gettext('conversions.length.omstaz', language), 6.60656],
+      [gettext('conversions.length.lidhchazerun', language), 422.81984],
+      [gettext('conversions.length.chazerun', language), 3382.55872]
     ],
     mass: [
       [gettext('conversions.mass.gram', language), 1], // base
@@ -41,11 +41,11 @@ export default function ConversionsContent() {
       [gettext('conversions.volume.liter', language),  1], // base
       [gettext('conversions.volume.mliter', language), 0.001],
       [gettext('conversions.volume.paijas', language), 1.0999],
-      [gettext('conversions.volume.thusbaijas', language), 109.99]
+      [gettext('conversions.volume.thusbaijas', language), 70.3936]
     ],
     temp: [
       [gettext('conversions.temperature.celcius', language), 1], // base
-      [gettext('conversions.temperature.thozhe', language), 0.5201]
+      [gettext('conversions.temperature.thozhe', language), 0.7265625]
     ]
   }
 

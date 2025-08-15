@@ -110,115 +110,322 @@ const languages = {
   'Deutsch': {
     // todo
   },
-  '    ': { // this doesnt exist anymore, keeping for testing
+//  '    ': { // this doesnt exist anymore, keeping for testing
+//    general: {
+//      projectname: '',
+//      planetname: '',
+//      numberbase: 8,
+//      numbers: {
+//        0: "", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: ""
+//      },
+//      decimalsep: '',
+//      negnum: ''
+//    },
+//    navbar: {
+//      langswitch: {
+//        select: '',
+//        saveexit: '   ',
+//        langs: '',
+//        changelang: ' ',
+//        search: ' '
+//      },
+//      copyright: '  ',
+//      headertext: '',
+//      home: '',
+//      clock: '',
+//      conversions: '',
+//      featureplan: '',
+//      btnalt: ''
+//    },
+//    notfound: {
+//      pagenotfound: '  ',
+//      lost: '     ',
+//      pagereq: '        '
+//    },
+//    home: {
+//      construction: '  ',
+//      checkback: '        '
+//    },
+//    clock: {
+//      title: '',
+//      clockfacealt: '',
+//      smonthnames: {
+//        bsp: '', esp: '',
+//        bsu: '', esu: '',
+//        bhr: '', ehr: '',
+//        bwr: '', ewr: ''
+//      },
+//      lmonthnames: {
+//        1: '', 2: '', 3: '', 4: '',
+//        5: '', 6: '', 7: '', 8: '',
+//        9: '', 10: '', 11: '', 12: '',
+//        13: '', 14: '', 15: '', 16: '',
+//        17: '', 18: '', 19: '', 20: ''
+//      },
+//      lwdaynames: {
+//        1: '', 2: '', 3: '', 4: '',
+//        5: '', 6: '', 7: '', 8: ''
+//      }
+//    },
+//    plan: {
+//      featuresheader: '   ',
+//      header: '',
+//      andmore: '  ',
+//      interactivemap: ' ',
+//      climatesim: ''
+//    },
+//    conversions: {
+//      header: '',
+//      nounitgroup: '  ',
+//      sourcenum: '',
+//      group: '',
+//      lengthlbl: '',
+//      masslbl: '',
+//      volumelbl: '',
+//      temperaturelbl: '',
+//      sourceunit: '',
+//      targetunit: '',
+//      convertbtn: '',
+//      result: ' ', // do not leave a space after this please
+//      length: {
+//        meter: '',
+//        kmeter: '',
+//        mmeter: '',
+//        seijagemil: '',
+//        kaibroza: '',
+//        omstaz: '',
+//        lidhchazerun: '',
+//        chazerun: ''
+//      },
+//      mass: {
+//        gram: '',
+//        kgram: '',
+//        mton: '',
+//        agozuba: '',
+//        ezuba: '',
+//        madhezuba: ''
+//      },
+//      volume: {
+//        liter: '',
+//        mliter: '',
+//        paijas: '',
+//        thusbaijas: ''
+//      },
+//      temperature: {
+//        celcius: '',
+//        thozhe: ''
+//      }
+//    }
+//  },
+    '  ': {
     general: {
-      projectname: '',
-      planetname: '',
+      projectname: ' ',
+      planetname: '',
       numberbase: 8,
-      numbers: {
-        0: "", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: ""
-      },
+      numbers: {0: "", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: ""},
       decimalsep: '',
       negnum: ''
     },
     navbar: {
       langswitch: {
-        select: '',
-        saveexit: '   ',
-        langs: '',
-        changelang: ' ',
-        search: ' '
+        select: '',
+        saveexit: '',
+        langs: '',
+        changelang: ' ',
+        search: ' '
       },
-      copyright: '  ',
-      headertext: '',
-      home: '',
+      copyright: '  ',
+      headertext: ' ',
+      home: '',
       clock: '',
-      conversions: '',
-      featureplan: '',
-      btnalt: ''
+      conversions: '',
+      featureplan: '',
+      btnalt: ''
     },
     notfound: {
-      pagenotfound: '  ',
-      lost: '     ',
-      pagereq: '        '
+      pagenotfound: '404 -  .',
+      lost: '     ',
+      pagereq: ' .'
     },
     home: {
-      construction: '  ',
-      checkback: '        '
+      construction: '   ',
+      checkback: '        '
     },
     clock: {
-      title: '',
-      clockfacealt: '',
+      title: ' ',
+      clockfacealt: '',
       smonthnames: {
-        bsp: '', esp: '',
-        bsu: '', esu: '',
-        bhr: '', ehr: '',
-        bwr: '', ewr: ''
+        bsp: '', esp: '',
+        bsu: '', esu: '',
+        bhr: '', ehr: '',
+        bwr: '', ewr: ''
       },
       lmonthnames: {
-        1: '', 2: '', 3: '', 4: '',
-        5: '', 6: '', 7: '', 8: '',
-        9: '', 10: '', 11: '', 12: '',
-        13: '', 14: '', 15: '', 16: '',
-        17: '', 18: '', 19: '', 20: ''
+        1: '', 2: '', 3: '', 4: '',
+        5: '', 6: '', 7: '', 8: '',
+        9: '', 10: '', 11: '', 12: '',
+        13: '', 14: '', 15: '', 16: '',
+        17: '', 18: '', 19: '', 20: ''
       },
-      lwdaynames: {
-        1: '', 2: '', 3: '', 4: '',
-        5: '', 6: '', 7: '', 8: ''
+      lwdaynames:  {
+        1: ' ', 2: ' ', 3: ' ', 4: ' ',
+        5: ' ', 6: ' ', 7: ' ', 8: ' '
       }
     },
     plan: {
-      featuresheader: '   ',
-      header: '',
-      andmore: '  ',
-      interactivemap: ' ',
-      climatesim: ''
+      featuresheader: '    ',
+      header: ' ',
+      andmore: ' ',
+      interactivemap: '  ',
+      climatesim: ''
     },
     conversions: {
-      header: '',
-      nounitgroup: '  ',
-      sourcenum: '',
-      group: '',
-      lengthlbl: '',
-      masslbl: '',
-      volumelbl: '',
-      temperaturelbl: '',
-      sourceunit: '',
-      targetunit: '',
-      convertbtn: '',
-      result: ' ', // do not leave a space after this please
+      header: '',
+      nounitgroup: '   ',
+      sourcenum: ' ',
+      group: ' ',
+      lengthlbl: '',
+      masslbl: '',
+      volumelbl: '',
+      temperaturelbl: '',
+      sourceunit: '',
+      targetunit: '',
+      convertbtn: '',
+      result: ':', // do not leave a space after this please
       length: {
-        meter: '',
-        kmeter: '',
-        mmeter: '',
-        seijagemil: '',
-        kaibroza: '',
-        omstaz: '',
-        lidhchazerun: '',
-        chazerun: ''
+        meter: '',
+        kmeter: '',
+        mmeter: '',
+        seijagemil: ' ',
+        kaibroza: '  ',
+        omstaz: ' ',
+        lidhchazerun: '  ',
+        chazerun: ''
       },
       mass: {
-        gram: '',
-        kgram: '',
+        gram: '',
+        kgram: '',
         mton: '',
-        agozuba: '',
-        ezuba: '',
-        madhezuba: ''
+        agozuba: '',
+        ezuba: '',
+        madhezuba: '' 
       },
       volume: {
-        liter: '',
-        mliter: '',
-        paijas: '',
-        thusbaijas: ''
+        liter: '',
+        mliter: '',
+        paijas: '',
+        thusbaijas: ''
       },
       temperature: {
-        celcius: '',
-        thozhe: ''
+        celcius: '',
+        thozhe: ''
       }
     }
   },
-  'Þamon': {
-    // todo
+  'Tamón (naránl Latínu)': {
+    general: {
+      projectname: 'Anjú Róku',
+      planetname: 'Rok',
+      numberbase: 8,
+      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7"},
+      decimalsep: ',',
+      negnum: '-'
+    },
+    navbar: {
+      langswitch: {
+        select: 'Wjén',
+        saveexit: 'Lésor',
+        langs: 'Katmónn',
+        changelang: 'Katmóne nánar',
+        search: 'Katmoníjo tišl...'
+      },
+      copyright: '(š) anjú Róku',
+      headertext: 'Anjú Róku',
+      home: 'Raut',
+      clock: 'Tok',
+      conversions: 'Tatjánl',
+      featureplan: 'Tet',
+      btnalt: 'Icon'
+    },
+    notfound: {
+      pagenotfound: '404 - Lan wesrn.',
+      lost: 'Koskratásos? Rutjót kákem e tákaš čáswo.',
+      pagereq: 'lan wesrn.'
+    },
+    home: {
+      construction: 'Sóne matnónu ni taríwn.',
+      checkback: 'Toč e šau ja kei ošr sonnét tiš ra!'
+    },
+    clock: {
+      title: 'Tok Róku',
+      clockfacealt: 'tokfín',
+      smonthnames: {
+        bsp: 'Tujašmansálu', esp: 'Šujašmansálu',
+        bsu: 'Tujašmássu', esu: 'Šujašmássu',
+        bhr: 'Tujažjokélu', ehr: 'Šujažjokélu',
+        bwr: 'Tujažlaíf', ewr: 'Šujažlaíf'
+      },
+      lmonthnames: {
+        1: 'Teusúnu', 2: 'Teučaskílu', 3: 'Teuseolósu', 4: 'Teusatkašósu',
+        5: 'Teusatósu', 6: 'Tefanksunétu', 7: 'Teučúfu', 8: 'Teutúnu',
+        9: 'Tefankósu', 10: 'Teušoí', 11: 'Teukjusósu', 12: 'Tefatáč',
+        13: 'Teukčeú', 14: 'Teuteú', 15: 'Teusér', 16: 'Teutašáju',
+        17: 'Tefotísu', 18: 'Tefómu', 19: 'Teusakólu', 20: 'Teulít'
+      },
+      lwdaynames:  {
+        1: 'kan Šónu', 2: 'kan Kisónu', 3: 'kan Tekóju', 4: 'kan Ksónu',
+        5: 'kan Krásu', 6: 'kan Krúku', 7: 'kan Wénu', 8: 'kan Mánu'
+      }
+    },
+    plan: {
+      featuresheader: 'Tet akéšu juósu:',
+      header: 'Tet Akéšu',
+      andmore: 'Se wat!',
+      interactivemap: 'Kaulán e Takét',
+      climatesim: 'Sátoskau'
+    },
+    conversions: {
+      header: 'Tatjánl',
+      nounitgroup: 'Ai- wutíjau tatjanlósu wjénwo!',
+      sourcenum: 'Aték tatjanlútu',
+      group: 'Wutí tatjánl',
+      lengthlbl: 'Tokéje',
+      masslbl: 'Atúje',
+      volumelbl: 'Tátje',
+      temperaturelbl: 'Storés',
+      sourceunit: 'Tatjanlút',
+      targetunit: 'Tatjanjót',
+      convertbtn: 'Nánar',
+      result: 'Jasé:', // do not leave a space after this please
+      length: {
+        meter: 'Míter',
+        kmeter: 'Kilomíter',
+        mmeter: 'Milimíter',
+        seijagemil: 'Kem sejósu',
+        kaibroza: 'Sei e kai',
+        omstaz: 'Stásl ómu',
+        lidhchazerun: 'Časrún e lit',
+        chazerun: 'Časrún'
+      },
+      mass: {
+        gram: 'kram',
+        kgram: 'kilokrám',
+        mton: 'ton',
+        agozuba: 'Čkat',
+        ezuba: 'Kat',
+        madhezuba: 'Matkát'
+      },
+      volume: {
+        liter: 'Líter',
+        mliter: 'Mililíter',
+        paijas: 'Wajás',
+        thusbaijas: 'Tuswajás'
+      },
+      temperature: {
+        celcius: 'Kelkjús',
+        thozhe: 'Storés'
+      }
+    }
   },
   'Reska': {
     // todo
