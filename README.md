@@ -1,4 +1,8 @@
-# plan
+# Reproka.net
+
+This is a website for Project Reproka
+
+# TODO
 
 - map (interacive)
 - unit conversions
@@ -7,3 +11,17 @@
 - time duration calculations
 - moon phases
 - climate simulator thingy
+
+# Dev setup
+
+Make sure you have npm installed!
+
+Install deps
+```bash
+npm install
+```
+
+Start dev server
+```bash
+npm run dev
+```
