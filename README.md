@@ -11,6 +11,7 @@ This is a website for Project Reproka
 - time duration calculations
 - moon phases
 - climate simulator thingy
+- increase line height (>2.3) for javanese script
 
 # Dev setup
 
