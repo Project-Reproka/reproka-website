@@ -537,8 +537,8 @@ const languages = {
       projectname: 'ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ',
       planetname: 'ꦫꦺꦥꦿꦵꦏ',
       numberbase: 10,
-      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"},
-      decimalsep: '.',
+      numbers: {0: "꧐", 1: "꧑", 2: "꧒", 3: "꧓", 4: "꧔", 5: "꧕", 6: "꧖", 7: "꧗", 8: "꧘", 9: "꧙"},
+      decimalsep: '꧈',
       negnum: '-'
     },
     navbar: {
