@@ -427,6 +427,111 @@ const languages = {
       }
     }
   },
+  'Eudeň': {
+    general: {
+      projectname: 'Reproka o Aniň',
+      planetname: 'Reproka',
+      numberbase: 10,
+      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"},
+      decimalsep: '.',
+      negnum: '-'
+    },
+    navbar: {
+      langswitch: {
+        select: 'Wjen',
+        saveexit: 'Kaþmon Wjen',
+        langs: 'Kaþmonen',
+        changelang: 'Kaþmon Wjen',
+        search: 'Kaþmon Dižly'
+      },
+      copyright: '© Reproka o Aniň 2025',
+      headertext: 'Reproka o Aniň',
+      home: 'Raud',
+      clock: 'Kolyznel',
+      conversions: 'Tadjanol Rynanar',
+      featureplan: 'Tjad',
+      btnalt: 'Ryhadoþ'
+    },
+    notfound: {
+      pagenotfound: '404 - Lan i ducjanka',
+      lost: 'Ja e reuse? Kes o ryňau kaþ ošerwo.',
+      pagereq: 'Ja kþyšai lan i ducjanka'
+    },
+    home: {
+      construction: 'Ni kolyz dy ni lan iwen.',
+      checkback: 'Ja ošeršosir osen dudisašo!'
+    },
+    clock: {
+      title: 'Reproka o Kolyznel',
+      clockfacealt: 'kolyznel',
+      smonthnames: {
+        bsp: 'icnowoh', esp: 'maþnowoh',
+        bsu: 'icpešem', esu: 'maþpešem',
+        bhr: 'iclacejoh', ehr: 'maþlacejoh',
+        bwr: 'icydud', ewr: 'maþydud'
+      },
+      lmonthnames: {
+        1: 'yrakeud', 2: 'žirakeud', 3: 'karakeud', 4: 'sarakeud',
+        5: 'norakeud', 6: 'marakeud', 7: 'tarakeud', 8: 'þeirakeud',
+        9: 'kaurakeud', 10: 'carakeud', 11: 'cayrakeud', 12: 'cažirakeud',
+        13: 'cakarakeud', 14: 'casarakeud', 15: 'canorakeud', 16: 'camarakeud',
+        17: 'catarakeud', 18: 'caþeirakeud', 19: 'cakaurakeud', 20: 'žicarakeud'
+      },
+      lwdaynames:  {
+        1: 'yrakan', 2: 'žirakan', 3: 'karakan', 4: 'sarakan',
+        5: 'norakan', 6: 'marakan', 7: 'tarakan', 8: 'þeirakan'
+      }
+    },
+    plan: {
+      featuresheader: 'Inri krytjað þydisa:',
+      header: 'Os krac tjadol',
+      andmore: 'Heke za!',
+      interactivemap: 'Salyn krac kþylažyo ňeunel',
+      climatesim: 'Maþsadaškal'
+    },
+    conversions: {
+      header: 'Tadjanol nanar',
+      nounitgroup: 'Psst- Ja tadjanolcun cjanoh þusce!',
+      sourcenum: 'Krysko auš',
+      group: 'Auš o toucjel',
+      lengthlbl: 'Šmakil',
+      masslbl: 'Ňyscol',
+      volumelbl: 'Hwel',
+      temperaturelbl: 'Seþor',
+      sourceunit: 'Rysko o tadjanol',
+      targetunit: 'Þynanarka o tadjanol',
+      convertbtn: 'Nanarwo',
+      result: 'Þynanarka:', // do not leave a space after this please
+      length: {
+        meter: 'miter',
+        kmeter: 'wamiter',
+        mmeter: 'warkemiter',
+        seijagemil: 'sejašmal',
+        kaibroza: 'maþsejašmal',
+        omstaz: 'om šcol',
+        lidhchazerun: 'icycazel',
+        chazerun: 'cazel'
+      },
+      mass: {
+        gram: 'gram',
+        kgram: 'wagram',
+        mton: 'žugram',
+        agozuba: 'icezupa',
+        ezuba: 'ezupa',
+        madhezuba: 'maþezupa' //idk what an ezuba is tbh
+      },
+      volume: {
+        liter: 'liter',
+        mliter: 'warkeliter',
+        paijas: 'pajas',
+        thusbaijas: 'þupajas'
+      },
+      temperature: {
+        celcius: 'selsjus',
+        thozhe: 'þože'
+      }
+    }
+  },
   'Reska': {
     // todo
   },
@@ -441,7 +546,7 @@ const languages = {
   },
   'Takekava': {
     // todo
-  }
+  },
 }
 
 const langlist = Object.keys(languages)
