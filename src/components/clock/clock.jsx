@@ -26,10 +26,9 @@ export default function Clock({ language }) {
 
     const updateDate = () => {
       // for now this system does not respect any other systems, might implement that later idk
-      // what i will do now though is figure out how to use the custom numbers that some languages have instead of the hindi-arabic numbers
-      const sec_in_day = 84500;
+      const sec_in_day = 84486.786598;
       const daysPerLunarMonth = 16;
-      const seasonalMonthPattern = [42, 43, 42, 42, 43, 42, 42, 42];
+      const seasonalMonthPattern = [42, 43, 42, 43, 43, 43, 42, 43];
       const epochStart = new Date(Date.UTC(1421, 0, 15, 12, 0, 0));
       const now = new Date();
       const elapsedSeconds = (now - epochStart) / 1000;
@@ -46,7 +45,7 @@ export default function Clock({ language }) {
       let remainingDays = elapsedDays - daysCount;
       let seasonalMonth = 0;
       for (let i = 0; i < seasonalMonthPattern.length; i++) {
-        let monthLength = seasonalMonthPattern[i] + (i === 0 && seasonalYear % 4 === 0 ? 1 : 0);
+        let monthLength = seasonalMonthPattern[i] + (i === 0 && seasonalYear % 10 != 0 && seasonalYear % 2 === 0 ? 1 : 0);
         if (remainingDays < monthLength) break;
         remainingDays -= monthLength;
         seasonalMonth++;
