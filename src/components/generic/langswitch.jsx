@@ -60,7 +60,7 @@ export default function LangSwitch({ setlg, language }) {
 
           <input className="w-full h-12 text-lg rounded-xl p-2 px-4 bg-[rgba(127,127,255,10%)]" placeholder={gettext('navbar.langswitch.search', language)} type="text" onChange={handlequery} />
 
-          <div className="w-full h-[350px] text-xl p-3 flex flex-col gap-2 overflow-y-scroll rounded-l-md border-[#303053] border">
+          <div className="w-full h-[350px] text-xl p-3 flex flex-col flex-1 gap-2 overflow-y-scroll rounded-l-md border-[#303053] border">
             {list.map(item => 
               <LangSwitchListItm key={langlist.indexOf(item)} language={language} item={item} selected={selected == langlist.indexOf(item)} select={setSelected} />
             )}

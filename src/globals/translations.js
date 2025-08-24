@@ -427,6 +427,216 @@ const languages = {
       }
     }
   },
+  'Eudeň': {
+    general: {
+      projectname: 'Reproka o Aniň',
+      planetname: 'Reproka',
+      numberbase: 10,
+      numbers: {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"},
+      decimalsep: '.',
+      negnum: '-'
+    },
+    navbar: {
+      langswitch: {
+        select: 'Wjen',
+        saveexit: 'Kaþmon Wjen',
+        langs: 'Kaþmonen',
+        changelang: 'Kaþmon Wjen',
+        search: 'Kaþmon Dižly'
+      },
+      copyright: '© Reproka o Aniň 2025',
+      headertext: 'Reproka o Aniň',
+      home: 'Raud',
+      clock: 'Kolyznel',
+      conversions: 'Tadjanol Rynanar',
+      featureplan: 'Tjad',
+      btnalt: 'Ryhadoþ'
+    },
+    notfound: {
+      pagenotfound: '404 - Lan i ducjanka',
+      lost: 'Ja e reuse? Kes o ryňau kaþ ošerwo.',
+      pagereq: 'Ja kþyšai lan i ducjanka'
+    },
+    home: {
+      construction: 'Ni kolyz dy ni lan iwen.',
+      checkback: 'Ja ošeršosir osen dudisašo!'
+    },
+    clock: {
+      title: 'Reproka o Kolyznel',
+      clockfacealt: 'kolyznel',
+      smonthnames: {
+        bsp: 'icnowoh', esp: 'maþnowoh',
+        bsu: 'icpešem', esu: 'maþpešem',
+        bhr: 'iclacejoh', ehr: 'maþlacejoh',
+        bwr: 'icydud', ewr: 'maþydud'
+      },
+      lmonthnames: {
+        1: 'yrakeud', 2: 'žirakeud', 3: 'karakeud', 4: 'sarakeud',
+        5: 'norakeud', 6: 'marakeud', 7: 'tarakeud', 8: 'þeirakeud',
+        9: 'kaurakeud', 10: 'carakeud', 11: 'cayrakeud', 12: 'cažirakeud',
+        13: 'cakarakeud', 14: 'casarakeud', 15: 'canorakeud', 16: 'camarakeud',
+        17: 'catarakeud', 18: 'caþeirakeud', 19: 'cakaurakeud', 20: 'žicarakeud'
+      },
+      lwdaynames:  {
+        1: 'yrakan', 2: 'žirakan', 3: 'karakan', 4: 'sarakan',
+        5: 'norakan', 6: 'marakan', 7: 'tarakan', 8: 'þeirakan'
+      }
+    },
+    plan: {
+      featuresheader: 'Inri krytjað þydisa:',
+      header: 'Os krac tjadol',
+      andmore: 'Heke za!',
+      interactivemap: 'Salyn krac kþylažyo ňeunel',
+      climatesim: 'Maþsadaškal'
+    },
+    conversions: {
+      header: 'Tadjanol nanar',
+      nounitgroup: 'Psst- Ja tadjanolcun cjanoh þusce!',
+      sourcenum: 'Krysko auš',
+      group: 'Auš o toucjel',
+      lengthlbl: 'Šmakil',
+      masslbl: 'Ňyscol',
+      volumelbl: 'Hwel',
+      temperaturelbl: 'Seþor',
+      sourceunit: 'Rysko o tadjanol',
+      targetunit: 'Þynanarka o tadjanol',
+      convertbtn: 'Nanarwo',
+      result: 'Þynanarka:', // do not leave a space after this please
+      length: {
+        meter: 'miter',
+        kmeter: 'wamiter',
+        mmeter: 'warkemiter',
+        seijagemil: 'sejašmal',
+        kaibroza: 'maþsejašmal',
+        omstaz: 'om šcol',
+        lidhchazerun: 'icycazel',
+        chazerun: 'cazel'
+      },
+      mass: {
+        gram: 'kram',
+        kgram: 'wakram',
+        mton: 'žukram',
+        agozuba: 'icezupa',
+        ezuba: 'ezupa',
+        madhezuba: 'maþezupa' //idk what an ezuba is tbh
+      },
+      volume: {
+        liter: 'liter',
+        mliter: 'warkeliter',
+        paijas: 'pajas',
+        thusbaijas: 'þupajas'
+      },
+      temperature: {
+        celcius: 'selsjus',
+        thozhe: 'þože'
+      }
+    }
+  },
+  'ꦌꦴꦝꦺꦁ': {
+    general: {
+      projectname: 'ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ',
+      planetname: 'ꦫꦺꦥꦿꦵꦏ',
+      numberbase: 10,
+      numbers: {0: "꧐", 1: "꧑", 2: "꧒", 3: "꧓", 4: "꧔", 5: "꧕", 6: "꧖", 7: "꧗", 8: "꧘", 9: "꧙"},
+      decimalsep: '꧈',
+      negnum: '-'
+    },
+    navbar: {
+      langswitch: {
+        select: 'ꦮꦾꦺꦤ꧀',
+        saveexit: 'ꦏꦛ꧀ꦩꦵꦤ꧀ ꦮꦾꦺꦤ꧀',
+        langs: 'ꦏꦛ꧀ꦤꦵꦤꦺꦤ꧀',
+        changelang: 'ꦏꦛ꧀ꦩꦵꦤ꧀ ꦮꦾꦺꦤ꧀',
+        search: 'ꦏꦛ꧀ꦩꦵꦤ꧀ ꦝꦶꦗ꧀ꦊ'
+      },
+      copyright: '© ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ ꧇꧒꧐꧒꧕꧇',
+      headertext: 'ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ',
+      home: 'ꦫꦻꦴꦝ꧀',
+      clock: 'ꦏꦵꦊꦰ꧀ꦤꦺꦭ꧀',
+      conversions: 'ꦠꦞꦾꦤꦵꦭ꧀ ꦉꦤꦤꦂ',
+      featureplan: 'ꦠꦾꦝ꧀',
+      btnalt: 'ꦉꦲꦝꦵꦛ꧀'
+    },
+    notfound: {
+      pagenotfound: '404 - ꦭꦤ꧀ ꦆ ꦝꦸꦕꦾꦤ꧀ꦏ',
+      lost: 'ꦪ ꦌ ꦫꦼꦴꦱꦺ? ꦏꦺꦱ꧀ ꦎ ꦉꦤꦻꦴ ꦏꦛ꧀ ꦎꦯꦺꦫ꧀ꦮꦵ꧉',
+      pagereq: 'ꦪ ꦏ꧀ꦛꦼꦯꦻ ꦭꦤ꧀ ꦆ ꦝꦸꦕꦾꦤ꧀ꦏ'
+    },
+    home: {
+      construction: 'ꦤꦶ ꦏꦵꦭ꧀ꦰ꧀ ꦤꦶ ꦭꦤ꧀ ꦆꦮꦺꦤ꧀꧉',
+      checkback: 'ꦪ ꦎꦯꦼꦂꦯꦵꦱꦶꦂ ꦎꦱꦺꦤ꧀ ꦝꦸꦝꦶꦱꦻꦯꦵ!'
+    },
+    clock: {
+      title: 'ꦫꦺꦥꦿꦵꦏ ꦎ ꦏꦵꦭ꧀ꦰ꧀ꦤꦺꦭ꧀',
+      clockfacealt: 'ꦏꦵꦭ꧀ꦰ꧀ꦤꦺꦭ꧀',
+      smonthnames: {
+        bsp: 'ꦆꦕ꧀ꦤꦵꦮꦵꦃ', esp: 'ꦩꦛ꧀ꦤꦵꦮꦵꦃ',
+        bsu: 'ꦆꦕ꧀ꦥꦺꦯꦺꦩ꧀', esu: 'ꦩꦛ꧀ꦥꦺꦯꦺꦩ꧀',
+        bhr: 'ꦆꦕ꧀ꦭꦕꦺꦪꦵꦃ', ehr: 'ꦩꦛ꧀ꦭꦕꦺꦪꦵꦃ',
+        bwr: 'ꦆꦕꦼꦝꦸꦝ꧀', ewr: 'ꦩꦛꦼꦝꦸꦝ꧀'
+      },
+      lmonthnames: {
+        1: 'ꦇꦫꦏꦼꦴꦝ꧀', 2: 'ꦗꦶꦫꦏꦼꦴꦝ꧀', 3: 'ꦏꦫꦏꦼꦴꦝ꧀', 4: 'ꦱꦫꦏꦼꦴꦝ꧀',
+        5: 'ꦤꦵꦫꦏꦼꦴꦝ꧀', 6: 'ꦩꦫꦏꦼꦴꦝ꧀', 7: 'ꦠꦫꦏꦼꦴꦝ꧀', 8: 'ꦛꦷꦫꦏꦼꦴꦝ꧀',
+        9: 'ꦏꦻꦴꦫꦏꦼꦴꦝ꧀', 10: 'ꦕꦫꦏꦼꦴꦝ꧀', 11: 'ꦕꦇꦫꦏꦼꦴꦝ꧀', 12: 'ꦕꦗꦶꦫꦏꦼꦴꦝ꧀',
+        13: 'ꦕꦏꦫꦏꦼꦴꦝ꧀', 14: 'ꦕꦱꦫꦏꦼꦴꦝ꧀', 15: 'ꦕꦤꦵꦫꦏꦼꦴꦝ꧀', 16: 'ꦕꦩꦫꦏꦼꦴꦝ꧀',
+        17: 'ꦕꦠꦫꦏꦼꦴꦝ꧀', 18: 'ꦕꦛꦷꦫꦏꦼꦴꦝ꧀', 19: 'ꦕꦏꦻꦴꦫꦏꦼꦴꦝ꧀', 20: 'ꦗꦶꦕꦫꦏꦼꦴꦝ꧀'
+      },
+      lwdaynames:  {
+        1: 'ꦇꦫꦏꦤ꧀', 2: 'ꦗꦶꦫꦏꦤ꧀', 3: 'ꦏꦫꦏꦤ꧀', 4: 'ꦱꦫꦏꦤ꧀',
+        5: 'ꦤꦵꦫꦏꦤ꧀', 6: 'ꦩꦫꦏꦤ꧀', 7: 'ꦠꦫꦏꦤ꧀', 8: 'ꦛꦷꦫꦏꦤ꧀'
+      }
+    },
+    plan: {
+      featuresheader: 'ꦆꦤꦿꦶ ꦏ꧀ꦉꦠꦾꦢ꧀ ꦛꦼꦝꦶꦱ:',
+      header: 'ꦎꦱ꧀ ꦏꦿꦕ꧀ ꦠꦾꦝꦵꦭ꧀',
+      andmore: 'ꦲꦺꦏꦺ ꦰ!',
+      interactivemap: 'ꦱꦊꦤ꧀ ꦏꦿꦕ꧀ ꦏ꧀ꦛꦼꦭꦗꦼꦎ ꦔꦼꦴꦤꦺꦭ꧀',
+      climatesim: 'ꦩꦛ꧀ꦱꦝꦯ꧀ꦏꦭ꧀'
+    },
+    conversions: {
+      header: 'ꦠꦝꦾꦤꦵꦭ꧀ ꦤꦤꦂ',
+      nounitgroup: 'ꦥ꧀ꦱ꧀ꦠ꧀꧈ ꦪ ꦠꦝꦾꦧꦵꦭ꧀ꦕꦸꦤ꧀ ꦕꦾꦤꦵꦃ ꦛꦸꦱ꧀ꦕꦺ!',
+      sourcenum: 'ꦏ꧀ꦉꦱ꧀ꦏꦵ ꦎꦴꦯ꧀',
+      group: 'ꦎꦴꦯ꧀ ꦎ ꦠꦺꦴꦕꦾꦺꦭ꧀',
+      lengthlbl: 'ꦯ꧀ꦩꦏꦶꦭ꧀',
+      masslbl: 'ꦔꦼꦱ꧀ꦕꦵꦭ꧀',
+      volumelbl: 'ꦲ꧀ꦮꦺꦭ꧀',
+      temperaturelbl: 'ꦱꦺꦛꦵꦂ',
+      sourceunit: 'ꦉꦱ꧀ꦏꦵ ꦎ ꦠꦝꦾꦤꦵꦭ꧀',
+      targetunit: 'ꦛꦼꦤꦤꦂꦏ ꦎ ꦠꦝꦾꦤꦵꦭ꧀',
+      convertbtn: 'ꦤꦤꦂꦮꦵ',
+      result: 'ꦛꦼꦤꦤꦂꦏ:', // do not leave a space after this please
+      length: {
+        meter: 'ꦩꦶꦠꦺꦂ',
+        kmeter: 'ꦮꦩꦶꦠꦺꦂ',
+        mmeter: 'ꦮꦂꦏꦺꦩꦶꦠꦺꦂ',
+        seijagemil: 'ꦱꦺꦪꦯ꧀ꦩꦭ꧀',
+        kaibroza: 'ꦩꦛ꧀ꦱꦺꦪꦯ꧀ꦩꦭ꧀',
+        omstaz: 'ꦎꦩ꧀ ꦯ꧀ꦕꦵꦭ꧀',
+        lidhchazerun: 'ꦆꦕꦼꦕꦰꦺꦭ꧀',
+        chazerun: 'ꦕꦰꦺꦭ꧀'
+      },
+      mass: {
+        gram: 'ꦏꦿꦩ꧀',
+        kgram: 'ꦮꦏꦿꦩ꧀',
+        mton: 'ꦗꦸꦏꦿꦩ꧀',
+        agozuba: 'ꦆꦕꦺꦰꦸꦥ',
+        ezuba: 'ꦌꦰꦸꦥ',
+        madhezuba: 'ꦩꦛꦺꦰꦸꦥ' //idk what an ezuba is tbh
+      },
+      volume: {
+        liter: 'ꦭꦶꦠꦺꦂ',
+        mliter: 'ꦮꦂꦏꦺꦭꦶꦠꦺꦂ',
+        paijas: 'ꦥꦪꦱ꧀',
+        thusbaijas: 'ꦛꦸꦥꦗꦱ꧀'
+      },
+      temperature: {
+        celcius: 'ꦱꦺꦭ꧀ꦱꦾꦸꦱ꧀',
+        thozhe: 'ꦛꦵꦗꦺ'
+      }
+    }
+  },
   'Reska': {
     // todo
   },
@@ -441,7 +651,7 @@ const languages = {
   },
   'Takekava': {
     // todo
-  }
+  },
 }
 
 const langlist = Object.keys(languages)
