@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import $ from '@/components/generic/dollarsign'
+import $, { $elementless } from '@/components/generic/dollarsign'
 import Navbar from '@/components/generic/navbar'
 
 export default function Content404() {
