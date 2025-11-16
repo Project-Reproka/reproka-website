@@ -1,0 +1,167 @@
+{
+  "language_info": {
+    "numbers": {
+      "numberbase": 10,
+      "digits": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9"
+      },
+      "decimal": ".",
+      "number_negator_prefix": "-",
+      "number_negator_suffix": ""
+    },
+    "time_and_date": {
+      "season_months": {
+        "bsp": "icnowoh",
+        "esp": "maþnowoh",
+        "bsu": "icpešem",
+        "esu": "maþpešem",
+        "bhr": "iclacejoh",
+        "ehr": "maþlacejoh",
+        "bwr": "icydud",
+        "ewr": "maþydud"
+      },
+      "lunar_months": [
+        "yrakeud",
+        "žirakeud",
+        "karakeud",
+        "sarakeud",
+        "norakeud",
+        "marakeud",
+        "tarakeud",
+        "þeirakeud",
+        "kaurakeud",
+        "carakeud",
+        "cayrakeud",
+        "cažirakeud",
+        "cakarakeud",
+        "casarakeud",
+        "canorakeud",
+        "camarakeud",
+        "catarakeud",
+        "caþeirakeud",
+        "cakaurakeud",
+        "žicarakeud"
+      ],
+      "weekdays": [
+        "yrakan",
+        "žirakan",
+        "karakan",
+        "sarakan",
+        "norakan",
+        "marakan",
+        "tarakan",
+        "þeirakan"
+      ]
+    },
+    "units": { // units follow "singular": [ "singular", "plural" ]
+      "none": {
+        "Psst- Try selecting a unit group!": [ "Psst- Ja tadjanolcun cjanoh þusce!", null ]
+      },
+      "length": {
+        "meter": [ "miter", null ],
+        "kilometer": [ "wamiter", null ],
+        "millimeter": [ "warkemiter", null ],
+        "seijagemil": [ "sejašmal", null ],
+        "kaibroza": [ "maþsejašmal", null ],
+        "omstaz":  [ "om šcol", null ],
+        "lidhchazerun": [ "icycazel", null ],
+        "chazerun": [ "cazel", null ]
+      },
+      "mass": {
+        "gram": [ "kram", null ],
+        "kilogram": [ "wakram", null ],
+        "metric ton": [ "žukram", null ],
+        "agozuba": [ "icezupa", null ],
+        "ezuba": [ "ezupa", null ],
+        "madhezuba": [ "maþezupa", null ]
+      },
+      "volume": {
+        "liter": [ "liter", null ],
+        "milliliter": [ "warkeliter", null ],
+        "paijas": [ "pajas", null ],
+        "thusbaijas": [ "þupajas", null ]
+      },
+      "temperature": {
+        "celcius": [ "selsjus", null ],
+        "thozhe": [ "þože", null ]
+      }
+    },
+    "unit_values": { // don't translate the names on the left -- provide the english names + translate them above
+      "none": [      // you can just add more lines if you need to add more
+        [ "Psst- Try selecting a unit group!", 1 ]
+      ],
+      "length": [
+        [ "meter", 1 ], // base
+        [ "kilometer", 1000 ],
+        [ "millimeter", 0.001 ],
+        [ "seijagemil", 0.1032275 ],
+        [ "kaibroza", 0.82582 ],
+        [ "omstaz", 6.60656 ],
+        [ "lidhchazerun", 422.81984 ],
+        [ "chazerun", 3382.55872 ]
+      ],
+      "mass": [
+        [ "gram", 1 ], // base
+        [ "kilogram", 1000 ],
+        [ "metric ton", 1000000 ],
+        [ "agozuba", 1.0999 ],
+        [ "ezuba", 1099.9 ],
+        [ "madhezuba", 1099900 ]
+      ],
+      "volume": [ 
+        [ "liter", 1 ], // base
+        [ "milliliter", 0.001 ],
+        [ "paijas", 1.0999 ],
+        [ "thusbaijas", 70.3936 ]
+      ],
+      "temperature": [
+        [ "celcius", 1 ], // base
+        [ "thozhe", 0.7265625 ]
+      ]
+    }
+  },
+  "Project Reproka": "Reproka o Aniň",
+  "Reproka": "Reproka",
+  "Select": "Wjen", // verb as in "select your choice"
+  "Save & Exit": "Kaþmon Wjen",
+  "Languages": "Kaþmonen",
+  "Change Language": "Kaþmon Wjen",
+  "Search languages...": "Kaþmon Dižly",
+  "© Project Reproka 2025": "© Reproka o Aniň 2025",
+  "Home": "Raud",
+  "Clock": "Kolyznel",
+  "Unit Conversions": "Tadjanol Rynanar",
+  "Feature Plan": "Os krac tjadol",
+  "Icon": "Ryhadoþ",
+  "404 - Page Not Found": "404 - Lan i ducjanka",
+  "Lost? Return to our homepage via the sidebar to the left.": "Ja e reuse? Kes o ryňau kaþ ošerwo.",
+  "The page you requested could not be found.": "Ja kþyšai lan i ducjanka",
+  "This website is currently under construction.": "Ni kolyz dy ni lan iwen.",
+  "Check back later and I'm sure there'll be something new here!": "Ja ošeršosir osen dudisašo!",
+  "Reproka Clock": "Reproka o Kolyznel",
+  "Clockface": "Kolyznel", // alt text for the clockface image
+  "Our planned features include:": "Inri krytjað þydisa:",
+  "And more!": "Heke za!",
+  "Interactive region map": "Salyn krac kþylažyo ňeunel",
+  "Climate simulator": "Maþsadaškal",
+  "Source unit value": "Krysko auš",
+  "Unit group": "Auš o toucjel",
+  "Length": "Šmakil",
+  "Mass": "Ňyscol",
+  "Volume": "Hwel",
+  "Temperature": "Seþor",
+  "Source unit": "Rysko o tadjanol",
+  "Target unit": "Þynanarka o tadjanol",
+  "Convert": "Nanarwo", // verb as in converting between units
+  "Result:": "Þynanarka:",
+  "Open Menu": null
+}

@@ -1,7 +1,7 @@
-import "@/globals/globals.css"
+import '@/globals/globals.css'
+import SecondRootLayout from './layoutcontent'
 
-// providing metadata as a backup ig
-
+// providing metadata as a default in case a page doesnt specify it
 export const metadata = {
   title: 'Project Reproka',
   description: 'Welcome to Reproka. This website is currently under construction.'
@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <SecondRootLayout>
+          {children}
+        </SecondRootLayout>
       </body>
     </html>
   )

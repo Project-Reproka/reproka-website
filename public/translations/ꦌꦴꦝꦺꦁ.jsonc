@@ -1,0 +1,167 @@
+{
+  "language_info": {
+    "numbers": {
+      "numberbase": 10,
+      "digits": {
+        "0": "꧐",
+        "1": "꧑",
+        "2": "꧒",
+        "3": "꧓",
+        "4": "꧔",
+        "5": "꧕",
+        "6": "꧖",
+        "7": "꧗",
+        "8": "꧘",
+        "9": "꧙"
+      },
+      "decimal": "꧈",
+      "number_negator_prefix": "-",
+      "number_negator_suffix": ""
+    },
+    "time_and_date": {
+      "season_months": {
+        "bsp": "ꦆꦕ꧀ꦤꦵꦮꦵꦃ",
+        "esp": "ꦩꦛ꧀ꦤꦵꦮꦵꦃ",
+        "bsu": "ꦆꦕ꧀ꦥꦺꦯꦺꦩ꧀",
+        "esu": "ꦩꦛ꧀ꦥꦺꦯꦺꦩ꧀",
+        "bhr": "ꦆꦕ꧀ꦭꦕꦺꦪꦵꦃ",
+        "ehr": "ꦩꦛ꧀ꦭꦕꦺꦪꦵꦃ",
+        "bwr": "ꦆꦕꦼꦝꦸꦝ꧀",
+        "ewr": "ꦩꦛꦼꦝꦸꦝ꧀"
+      },
+      "lunar_months": [
+        "ꦇꦫꦏꦼꦴꦝ꧀",
+        "ꦗꦶꦫꦏꦼꦴꦝ꧀",
+        "ꦏꦫꦏꦼꦴꦝ꧀",
+        "ꦱꦫꦏꦼꦴꦝ꧀",
+        "ꦤꦵꦫꦏꦼꦴꦝ꧀",
+        "ꦩꦫꦏꦼꦴꦝ꧀",
+        "ꦠꦫꦏꦼꦴꦝ꧀",
+        "ꦛꦷꦫꦏꦼꦴꦝ꧀",
+        "ꦏꦻꦴꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦇꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦗꦶꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦏꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦱꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦤꦵꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦩꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦠꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦛꦷꦫꦏꦼꦴꦝ꧀",
+        "ꦕꦏꦻꦴꦫꦏꦼꦴꦝ꧀",
+        "ꦗꦶꦕꦫꦏꦼꦴꦝ꧀"
+      ],
+      "weekdays": [
+        "ꦇꦫꦏꦤ꧀",
+        "ꦗꦶꦫꦏꦤ꧀",
+        "ꦏꦫꦏꦤ꧀",
+        "ꦱꦫꦏꦤ꧀",
+        "ꦤꦵꦫꦏꦤ꧀",
+        "ꦩꦫꦏꦤ꧀",
+        "ꦠꦫꦏꦤ꧀",
+        "ꦛꦷꦫꦏꦤ꧀"
+      ]
+    },
+    "units": { // units follow "singular": [ "singular", "plural" ]
+      "none": {
+        "Psst- Try selecting a unit group!": [ "ꦥ꧀ꦱ꧀ꦠ꧀꧈ ꦪ ꦠꦝꦾꦧꦵꦭ꧀ꦕꦸꦤ꧀ ꦕꦾꦤꦵꦃ ꦛꦸꦱ꧀ꦕꦺ!", null ]
+      },
+      "length": {
+        "meter": [ "ꦩꦶꦠꦺꦂ", null ],
+        "kilometer": [ "ꦮꦩꦶꦠꦺꦂ", null ],
+        "millimeter": [ "ꦮꦂꦏꦺꦩꦶꦠꦺꦂ", null ],
+        "seijagemil": [ "ꦱꦺꦪꦯ꧀ꦩꦭ꧀", null ],
+        "kaibroza": [ "ꦩꦛ꧀ꦱꦺꦪꦯ꧀ꦩꦭ꧀", null ],
+        "omstaz":  [ "ꦎꦩ꧀ ꦯ꧀ꦕꦵꦭ꧀", null ],
+        "lidhchazerun": [ "ꦆꦕꦼꦕꦰꦺꦭ꧀", null ],
+        "chazerun": [ "ꦕꦰꦺꦭ꧀", null ]
+      },
+      "mass": {
+        "gram": [ "ꦏꦿꦩ꧀", null ],
+        "kilogram": [ "ꦮꦏꦿꦩ꧀", null ],
+        "metric ton": [ "ꦗꦸꦏꦿꦩ꧀", null ],
+        "agozuba": [ "ꦆꦕꦺꦰꦸꦥ", null ],
+        "ezuba": [ "ꦌꦰꦸꦥ", null ],
+        "madhezuba": [ "ꦩꦛꦺꦰꦸꦥ", null ]
+      },
+      "volume": {
+        "liter": [ "ꦭꦶꦠꦺꦂ", null ],
+        "milliliter": [ "ꦮꦂꦏꦺꦭꦶꦠꦺꦂ", null ],
+        "paijas": [ "ꦥꦪꦱ꧀", null ],
+        "thusbaijas": [ "ꦛꦸꦥꦗꦱ꧀", null ]
+      },
+      "temperature": {
+        "celcius": [ "ꦱꦺꦭ꧀ꦱꦾꦸꦱ꧀", null ],
+        "thozhe": [ "ꦛꦵꦗꦺ", null ]
+      }
+    },
+    "unit_values": { // don't translate the names on the left -- provide the english names + translate them above
+      "none": [      // you can just add more lines if you need to add more
+        [ "Psst- Try selecting a unit group!", 1 ]
+      ],
+      "length": [
+        [ "meter", 1 ], // base
+        [ "kilometer", 1000 ],
+        [ "millimeter", 0.001 ],
+        [ "seijagemil", 0.1032275 ],
+        [ "kaibroza", 0.82582 ],
+        [ "omstaz", 6.60656 ],
+        [ "lidhchazerun", 422.81984 ],
+        [ "chazerun", 3382.55872 ]
+      ],
+      "mass": [
+        [ "gram", 1 ], // base
+        [ "kilogram", 1000 ],
+        [ "metric ton", 1000000 ],
+        [ "agozuba", 1.0999 ],
+        [ "ezuba", 1099.9 ],
+        [ "madhezuba", 1099900 ]
+      ],
+      "volume": [ 
+        [ "liter", 1 ], // base
+        [ "milliliter", 0.001 ],
+        [ "paijas", 1.0999 ],
+        [ "thusbaijas", 70.3936 ]
+      ],
+      "temperature": [
+        [ "celcius", 1 ], // base
+        [ "thozhe", 0.7265625 ]
+      ]
+    }
+  },
+  "Project Reproka": "ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ",
+  "Reproka": "ꦫꦺꦥꦿꦵꦏ",
+  "Select": "ꦮꦾꦺꦤ꧀", // verb as in "select your choice"
+  "Save & Exit": "ꦏꦛ꧀ꦩꦵꦤ꧀ ꦮꦾꦺꦤ꧀",
+  "Languages": "ꦏꦛ꧀ꦤꦵꦤꦺꦤ꧀",
+  "Change Language": "ꦏꦛ꧀ꦩꦵꦤ꧀ ꦮꦾꦺꦤ꧀",
+  "Search languages...": "ꦏꦛ꧀ꦩꦵꦤ꧀ ꦝꦶꦗ꧀ꦊ",
+  "© Project Reproka 2025": "© ꦫꦺꦥꦿꦵꦏ ꦎ ꦄꦤꦶꦁ ꧇꧒꧐꧒꧕꧇",
+  "Home": "ꦫꦻꦴꦝ꧀",
+  "Clock": "ꦏꦵꦊꦰ꧀ꦤꦺꦭ꧀",
+  "Unit Conversions": "ꦠꦝꦾꦤꦵꦭ꧀ ꦤꦤꦂ",
+  "Feature Plan": "ꦎꦱ꧀ ꦏꦿꦕ꧀ ꦠꦾꦝꦵꦭ꧀",
+  "Icon": "ꦉꦲꦝꦵꦛ꧀",
+  "404 - Page Not Found": "404 - ꦭꦤ꧀ ꦆ ꦝꦸꦕꦾꦤ꧀ꦏ",
+  "Lost? Return to our homepage via the sidebar to the left.": "ꦪ ꦌ ꦫꦼꦴꦱꦺ? ꦏꦺꦱ꧀ ꦎ ꦉꦤꦻꦴ ꦏꦛ꧀ ꦎꦯꦺꦫ꧀ꦮꦵ꧉",
+  "The page you requested could not be found.": "ꦪ ꦏ꧀ꦛꦼꦯꦻ ꦭꦤ꧀ ꦆ ꦝꦸꦕꦾꦤ꧀ꦏ",
+  "This website is currently under construction.": "ꦤꦶ ꦏꦵꦭ꧀ꦰ꧀ ꦤꦶ ꦭꦤ꧀ ꦆꦮꦺꦤ꧀꧉",
+  "Check back later and I'm sure there'll be something new here!": "ꦪ ꦎꦯꦼꦂꦯꦵꦱꦶꦂ ꦎꦱꦺꦤ꧀ ꦝꦸꦝꦶꦱꦻꦯꦵ!",
+  "Reproka Clock": "ꦫꦺꦥꦿꦵꦏ ꦎ ꦏꦵꦭ꧀ꦰ꧀ꦤꦺꦭ꧀",
+  "Clockface": "ꦏꦵꦭ꧀ꦰ꧀ꦤꦺꦭ꧀", // alt text for the clockface image
+  "Our planned features include:": "ꦆꦤꦿꦶ ꦏ꧀ꦉꦠꦾꦢ꧀ ꦛꦼꦝꦶꦱ:",
+  "And more!": "ꦲꦺꦏꦺ ꦰ!",
+  "Interactive region map": "ꦱꦊꦤ꧀ ꦏꦿꦕ꧀ ꦏ꧀ꦛꦼꦭꦗꦼꦎ ꦔꦼꦴꦤꦺꦭ꧀",
+  "Climate simulator": "ꦩꦛ꧀ꦱꦝꦯ꧀ꦏꦭ꧀",
+  "Source unit value": "ꦏ꧀ꦉꦱ꧀ꦏꦵ ꦎꦴꦯ꧀",
+  "Unit group": "ꦎꦴꦯ꧀ ꦎ ꦠꦺꦴꦕꦾꦺꦭ꧀",
+  "Length": "ꦯ꧀ꦩꦏꦶꦭ꧀",
+  "Mass": "ꦔꦼꦱ꧀ꦕꦵꦭ꧀",
+  "Volume": "ꦲ꧀ꦮꦺꦭ꧀",
+  "Temperature": "ꦱꦺꦛꦵꦂ",
+  "Source unit": "ꦉꦱ꧀ꦏꦵ ꦎ ꦠꦝꦾꦤꦵꦭ꧀",
+  "Target unit": "ꦛꦼꦤꦤꦂꦏ ꦎ ꦠꦝꦾꦤꦵꦭ꧀",
+  "Convert": "ꦤꦤꦂꦮꦵ", // verb as in converting between units
+  "Result:": "ꦛꦼꦤꦤꦂꦏ:",
+  "Open Menu": null
+}

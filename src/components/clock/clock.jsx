@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { gettext, getnumber } from '@/globals/translations'
+import $, { $seasonmonth, $lunarmonth, $weekday, $numberinfo, $number, $elementless } from '@/components/generic/dollarsign'
 import Image from 'next/image'
 
-
 export default function Clock({ language }) {
-  const [date, setDate] = useState({ seasonal: "", lunar: "", time: "", meal: 0, talk: 0, mid: 0, tim: 0 })
+  const [date, setDate] = useState({ seasonal: [0, 0, 0], lunar: [0, 0], time: "", meal: 0, talk: 0, longfall: 0, mid: 0, tim: 0 })
+  const numberbase = $numberinfo('numberbase')
+  const zero = $number(0)
 
   function getPointOnCircle(centerx, centery, radius, deg) {
     deg -= 90
@@ -18,6 +19,51 @@ export default function Clock({ language }) {
 
     return { xpos, ypos }
   }
+  
+  const seasonNames = [
+    $seasonmonth('bsp'),
+    $seasonmonth('esp'),
+    $seasonmonth('bsu'),
+    $seasonmonth('esu'),
+    $seasonmonth('bhr'),
+    $seasonmonth('ehr'),
+    $seasonmonth('bwr'),
+    $seasonmonth('ewr')
+  ]
+
+  const lunarNames = [
+    $lunarmonth(0),
+    $lunarmonth(1),
+    $lunarmonth(2),
+    $lunarmonth(3),
+    $lunarmonth(4),
+    $lunarmonth(5),
+    $lunarmonth(6),
+    $lunarmonth(7),
+    $lunarmonth(8),
+    $lunarmonth(9),
+    $lunarmonth(10),
+    $lunarmonth(11),
+    $lunarmonth(12),
+    $lunarmonth(13),
+    $lunarmonth(14),
+    $lunarmonth(15),
+    $lunarmonth(16),
+    $lunarmonth(17),
+    $lunarmonth(18),
+    $lunarmonth(19)
+  ]
+
+  const weekdays = [
+    $weekday(1),
+    $weekday(2),
+    $weekday(3),
+    $weekday(4),
+    $weekday(5),
+    $weekday(6),
+    $weekday(7),
+    $weekday(8)
+  ]
 
   useEffect(() => {
     var canvas = document.getElementById('clockhands')
@@ -56,60 +102,14 @@ export default function Clock({ language }) {
       const lunarMonth = Math.floor(elapsedDays / daysPerLunarMonth) % 20; // 20-month repeating cycle
       const dayInLunarMonth = (elapsedDays % daysPerLunarMonth) + 1;
 
-      const seasonNames = [
-        [gettext("clock.smonthnames.bsp", language)],
-        [gettext("clock.smonthnames.esp", language)],
-        [gettext("clock.smonthnames.bsu", language)],
-        [gettext("clock.smonthnames.esu", language)],
-        [gettext("clock.smonthnames.bhr", language)],
-        [gettext("clock.smonthnames.ehr", language)],
-        [gettext("clock.smonthnames.bwr", language)],
-        [gettext("clock.smonthnames.ewr", language)]
-      ]
-
-      const lunarNames = [
-        [gettext("clock.lmonthnames.1", language)],
-        [gettext("clock.lmonthnames.2", language)],
-        [gettext("clock.lmonthnames.3", language)],
-        [gettext("clock.lmonthnames.4", language)],
-        [gettext("clock.lmonthnames.5", language)],
-        [gettext("clock.lmonthnames.6", language)],
-        [gettext("clock.lmonthnames.7", language)],
-        [gettext("clock.lmonthnames.8", language)],
-        [gettext("clock.lmonthnames.9", language)],
-        [gettext("clock.lmonthnames.10", language)],
-        [gettext("clock.lmonthnames.11", language)],
-        [gettext("clock.lmonthnames.12", language)],
-        [gettext("clock.lmonthnames.13", language)],
-        [gettext("clock.lmonthnames.14", language)],
-        [gettext("clock.lmonthnames.15", language)],
-        [gettext("clock.lmonthnames.16", language)],
-        [gettext("clock.lmonthnames.17", language)],
-        [gettext("clock.lmonthnames.18", language)],
-        [gettext("clock.lmonthnames.19", language)],
-        [gettext("clock.lmonthnames.20", language)]
-      ]
-
-      const weekdays = [
-        [gettext("clock.lwdaynames.1", language)],
-        [gettext("clock.lwdaynames.2", language)],
-        [gettext("clock.lwdaynames.3", language)],
-        [gettext("clock.lwdaynames.4", language)],
-        [gettext("clock.lwdaynames.5", language)],
-        [gettext("clock.lwdaynames.6", language)],
-        [gettext("clock.lwdaynames.7", language)],
-        [gettext("clock.lwdaynames.8", language)]
-      ]
-
       var meals_in_day, talks_in_meal, longfalls_in_talk, stonefalls_in_longfall;
-      var base = gettext('general.numberbase', language)
-      
-      if (base == 8) {
+
+      if (numberbase == 8) {
         meals_in_day = 0o20
         talks_in_meal = 0o12
         longfalls_in_talk = 0o30
         stonefalls_in_longfall = 0o40
-      } else if (base == 20) {        // i love time :) NOTE this is a PLACEHOLDER please get time stuff from zora ASAP
+      } else if (numberbase == 20) {        // i love time :) NOTE this is a PLACEHOLDER please get time stuff from zora ASAP
         meals_in_day = 1354           // i love time :)
         talks_in_meal = 562           // i love time :)
         longfalls_in_talk = 23546     // i love time :)
@@ -132,16 +132,15 @@ export default function Clock({ language }) {
       var longfallsec = talksec % (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk);
       var stonefall = Math.floor(longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall));
       var stonefalldec = longfallsec / (sec_in_day / meals_in_day / talks_in_meal / longfalls_in_talk / stonefalls_in_longfall); // decimal
-      var zero = gettext('general.numbers.0', language)
       setDate({
-        seasonal: `${getnumber((remainingDays + 1), language)} ${seasonNames[seasonalMonth]}, ${getnumber(seasonalYear, language)}`,
-        lunar: `${getnumber(dayInLunarMonth, language)} ${lunarNames[lunarMonth]}`,
-        time: `${String(getnumber(meal, language)).padStart(2, zero)}:${getnumber(talk, language)}:${String(getnumber(longfall,language)).padStart(2, zero)}:${String(getnumber(Math.floor(stonefall), language)).padStart(2, zero)}`,
+        seasonal: [remainingDays + 1, seasonalMonth, seasonalYear],
+        lunar: [dayInLunarMonth, lunarMonth],
         meal: meal,
         talk: talk,
-        long: longfall,
-        mid:  meals_in_day,
-        tim:  talks_in_meal,
+        longfall: longfall,
+        stonefall: stonefall,
+        mid: meals_in_day,
+        tim: talks_in_meal,
         lit: longfalls_in_talk
       })
 
@@ -176,18 +175,18 @@ export default function Clock({ language }) {
     return () => clearInterval(int)
   }, [language])
   
-  var facename = (gettext('general.numberbase', language) == 8 ? 'octal' : 'decimal') + '-clockface.svg'
-  
+  var facename = (numberbase == 8 ? 'octal' : 'decimal') + '-clockface.svg'
+
   return (
     <div className="flex flex-col gap-8">
       <div className="relative h-[420px] w-[420px] rounded-full scale-75 md:scale-100">
-        <Image className="absolute top-0 left-0 rounded-full border-cyan-200 border-2 shadow-custom" src={'/resources/images/clockfaces/' + (facename)} width={420} height={420} alt={gettext('clock.clockfacealt', language)} />
+        <Image className="absolute top-0 left-0 rounded-full border-cyan-200 border-2 shadow-custom" src={'/resources/images/clockfaces/' + (facename)} width={420} height={420} alt={$elementless('Clockface')} />
         <canvas className="absolute top-0 left-0" id="clockhands" width={420} height={420} />
       </div>
 
       <div className="z-10">
-        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.seasonal || '\u00a0'}</p>
-        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{date.lunar}, {date.time}</p>
+        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{$number(date.seasonal[0])} {seasonNames[date.seasonal[1]]} {$number(date.seasonal[2])}</p>
+        <p className="text-2xl" style={{textShadow:'0px 0px 50px #ffffff44'}}>{$number(date.lunar[0])} {lunarNames[date.lunar[1]]}, {$number(date.meal).toString().padStart(2, zero)}:{$number(date.talk)}:{String($number(date.longfall)).padStart(2, zero)}:{String($number(Math.floor(date.stonefall))).padStart(2, zero)}</p>
       </div>
     </div>
   )

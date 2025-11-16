@@ -1,13 +1,13 @@
 'use client'
 
-import { gettext } from '@/globals/translations'
+import $, { $elementless } from './dollarsign'
 
 import NavButton from '@/components/generic/navbutton'
 import LangSwitch from '@/components/generic/langswitch'
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function Navbar({ language, setlg }) {
+export default function Navbar() {
   const [ open, setOpen ] = useState(false)
 
   function handleToggle() {
@@ -20,19 +20,19 @@ export default function Navbar({ language, setlg }) {
 
       <div className={'fixed top-0 md:left-0 drop-shadow-[20px_-10px_20px_rgba(0,0,0,.75)] md:drop-shadow-none transition-transform -left-[400px] ' + (open ? 'translate-x-[400px]' : '')}>
         <div className="w-[350px] py-4 flex flex-col justify-between h-screen bg-[#0b0b14]">
-          <span className="text-2xl">{gettext('navbar.headertext', language)}</span>
+          <span className="text-2xl"><$>Project Reproka</$></span>
 
           <div className="flex flex-col gap-2 pr-4">
-            <NavButton language={language} link={'/'} icon={'home-6.svg'} content={gettext('navbar.home', language)} />
-            <NavButton language={language} link={'/clock'} icon={'time-18.svg'} content={gettext('navbar.clock', language)} />
-            <NavButton language={language} link={'/unit-conversions'} icon={'cursor-16.svg'} content={gettext('navbar.conversions', language)} />
-            <NavButton language={language} link={'/feature-plan'} icon={'calendar-9.svg'} content={gettext('navbar.featureplan', language)} />
+            <NavButton link={'/'} icon={'home-6.svg'} content={<$>Home</$>} />
+            <NavButton link={'/clock'} icon={'time-18.svg'} content={<$>Clock</$>} />
+            <NavButton link={'/unit-conversions'} icon={'cursor-16.svg'} content={<$>Unit Conversions</$>} />
+            <NavButton link={'/feature-plan'} icon={'calendar-9.svg'} content={<$>Feature Plan</$>} />
           </div>
 
           <div className="w-full flex flex-col gap-4 items-center mb-20 md:mb-0">
-            <LangSwitch setlg={setlg} language={language} />
+            <LangSwitch />
 
-            <span>{gettext('navbar.copyright', language)}</span>
+            <span>{<$>© Project Reproka 2025</$>}</span>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Navbar({ language, setlg }) {
           <Image src="resources/icons/angel-right-thin.svg" 
             width={32}
             height={32}
-            alt=""
+            alt={$elementless('Open Menu')}
             className={'transition-transform ' + (open ? 'rotate-180' : '')}
           />
         </div>

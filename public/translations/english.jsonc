@@ -1,0 +1,167 @@
+{
+  "language_info": {
+    "numbers": {
+      "numberbase": 10,
+      "digits": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9"
+      },
+      "decimal": ".",
+      "number_negator_prefix": "-",
+      "number_negator_suffix": ""
+    },
+    "time_and_date": {
+      "season_months": {
+        "bsp": "nozoþu",
+        "esp": "nozošau",
+        "bsu": "masojažeþu",
+        "esu": "masojažšau",
+        "bhr": "lačejoþu",
+        "ehr": "lačejošau",
+        "bwr": "duðyþu",
+        "ewr": "duðyšau"
+      },
+      "lunar_months": [
+        "water moon",
+        "flower moon",
+        "fire moon",
+        "tree moon",
+        "sky moon",
+        "fog moon",
+        "lightning moon",
+        "thunder moon",
+        "wind moon",
+        "middle moon",
+        "story moon",
+        "battle moon",
+        "bright moon",
+        "dark moon",
+        "blue moon",
+        "mountain moon",
+        "cave moon",
+        "stone moon",
+        "gold moon",
+        "short moon"
+      ],
+      "weekdays": [
+        "weekday 1",
+        "weekday 2",
+        "weekday 3",
+        "weekday 4",
+        "weekday 5",
+        "weekday 6",
+        "weekday 7",
+        "weekday 8"
+      ]
+    },
+    "units": { // units follow "singular": [ "singular", "plural" ]
+      "none": {
+        "Psst- Try selecting a unit group!": [ "Psst- Try selecting a unit group!", null ]
+      },
+      "length": {
+        "meter": [ "meter", "meters" ],
+        "kilometer": [ "kilometer", "kilometers" ],
+        "millimeter": [ "millimeter", "milliliters" ],
+        "seijagemil": [ "grass blade", "grass blades" ],
+        "kaibroza": [ "tall grass", "tall grasses" ],
+        "omstaz":  [ "stone throw", "stone throws" ],
+        "lidhchazerun": [ "short journey", "short journeys" ],
+        "chazerun": [ "journey", "journeys" ]
+      },
+      "mass": {
+        "gram": [ "gram", "grams" ],
+        "kilogram": [ "kilogram", "kilograms" ],
+        "metric ton": [ "metric ton", "metric tons" ],
+        "agozuba": [ "small ezuba", "small ezubas" ],
+        "ezuba": [ "ezuba", "ezubas" ],
+        "madhezuba": [ "large ezuba", "large ezubas" ]
+      },
+      "volume": {
+        "liter": [ "liter", "liters" ],
+        "milliliter": [ "milliliter", "milliliters" ],
+        "paijas": [ "generic container", "generic containers" ],
+        "thusbaijas": [ "hundred generic container", "hundred generic containers" ]
+      },
+      "temperature": {
+        "celcius": [ "degree celcius", "degrees celcius" ],
+        "thozhe": [ "degree of heat", "degrees of heat" ]
+      }
+    },
+    "unit_values": { // don't translate the names on the left -- provide the english names + translate them above
+      "none": [      // you can just add more lines if you need to add more
+        [ "Psst- Try selecting a unit group!", 1 ]
+      ],
+      "length": [
+        [ "meter", 1 ], // base
+        [ "kilometer", 1000 ],
+        [ "millimeter", 0.001 ],
+        [ "seijagemil", 0.1032275 ],
+        [ "kaibroza", 0.82582 ],
+        [ "omstaz", 6.60656 ],
+        [ "lidhchazerun", 422.81984 ],
+        [ "chazerun", 3382.55872 ]
+      ],
+      "mass": [
+        [ "gram", 1 ], // base
+        [ "kilogram", 1000 ],
+        [ "metric ton", 1000000 ],
+        [ "agozuba", 1.0999 ],
+        [ "ezuba", 1099.9 ],
+        [ "madhezuba", 1099900 ]
+      ],
+      "volume": [ 
+        [ "liter", 1 ], // base
+        [ "milliliter", 0.001 ],
+        [ "paijas", 1.0999 ],
+        [ "thusbaijas", 70.3936 ]
+      ],
+      "temperature": [
+        [ "celcius", 1 ], // base
+        [ "thozhe", 0.7265625 ]
+      ]
+    }
+  },
+  "Project Reproka": "Project Reproka",
+  "Reproka": "Reproka",
+  "Select": "Select", // verb as in "select your choice"
+  "Save & Exit": "Save & Exit",
+  "Languages": "Languages",
+  "Change Language": "Change Language",
+  "Search languages...": "Search languages...",
+  "© Project Reproka 2025": "© Project Reproka 2025",
+  "Home": "Home",
+  "Clock": "Clock",
+  "Unit Conversions": "Unit Conversions",
+  "Feature Plan": "Feature Plan",
+  "Icon": "Icon",
+  "404 - Page Not Found": "404 - Page Not Found",
+  "Lost? Return to our homepage via the sidebar to the left.": "Lost? Return to our homepage via the sidebar to the left.",
+  "The page you requested could not be found.": "The page you requested could not be found.",
+  "This website is currently under construction.": "This website is currently under construction.",
+  "Check back later and I'm sure there'll be something new here!": "Check back later and I'm sure there'll be something new here!",
+  "Reproka Clock": "Reproka Clock",
+  "Clockface": "Clockface", // alt text for the clockface image
+  "Our planned features include:": "Our planned features include:",
+  "And more!": "And more!",
+  "Interactive region map": "Interactive region map",
+  "Climate simulator": "Climate simulator",
+  "Source unit value": "Source unit value",
+  "Unit group": "Unit group",
+  "Length": "Length",
+  "Mass": "Mass",
+  "Volume": "Volume",
+  "Temperature": "Temperature",
+  "Source unit": "Source unit",
+  "Target unit": "Target unit",
+  "Convert": "Convert", // verb as in converting between units
+  "Result:": "Result:",
+  "Open Menu": "Open Menu"
+}
