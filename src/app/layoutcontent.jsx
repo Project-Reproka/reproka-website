@@ -6,17 +6,11 @@ import { TranslationLanguage, LanguageTranslations } from '@/globals/translation
 import stripJsonComments from 'strip-json-comments'
 import { langlist } from '@/globals/translations'
 
+let loaded = false
+
 export default function SecondRootLayout({ children }) {
   const [ language, setLanguage ] = useState('English')
   const [ translations, setTranslations ] = useState({})
-
-  useEffect(() => {
-    if (typeof localStorage.getItem('lang') == 'string') {
-      setLanguageWrapper(localStorage.getItem('lang'))
-    } else {
-      setLanguageWrapper('English')
-    }
-  }, [ setLanguageWrapper ])
 
   async function setLanguageWrapper(lang) {
     if (langlist.indexOf(lang) == -1) lang = 'English'
@@ -27,6 +21,22 @@ export default function SecondRootLayout({ children }) {
     setLanguage(lang)
     setTranslations(asjson)
   }
+
+  useEffect(() => {
+    function loadLanguage() {
+      const item = localStorage.getItem('lang')
+  
+      if (typeof item == 'string') {
+        setLanguageWrapper(item)
+      } else {
+        setLanguageWrapper('English')
+      }
+    }
+    
+    if (loaded) return
+    loaded = true
+    loadLanguage()
+  })
 
   return (
     <TranslationLanguage value={{ language, setLanguageWrapper }}>

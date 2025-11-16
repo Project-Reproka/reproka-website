@@ -2,5 +2,5 @@
 
 import { createContext } from 'react'
 
-export const TranslationLanguage = createContext('english')
+export const TranslationLanguage = createContext('English')
 export const LanguageTranslations = createContext({})
