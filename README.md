@@ -1,13 +1,12 @@
 # Reproka.net
 
-This is a website for Project Reproka
+This is the official website for Project Reproka!
 
 # TODO
 
 - map (interacive)
 - unit conversions
 - clock and calendar
-- wikipedia
 - time duration calculations
 - moon phases
 - climate simulator thingy
@@ -15,7 +14,7 @@ This is a website for Project Reproka
 
 # Dev setup
 
-Make sure you have npm installed!
+Make sure you have npm/nodejs installed!
 
 Install deps
 ```bash
@@ -24,5 +23,5 @@ npm install
 
 Start dev server
 ```bash
-npm run dev
+node index.js
 ```

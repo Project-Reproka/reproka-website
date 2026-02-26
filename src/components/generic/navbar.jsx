@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className="w-full flex flex-col gap-4 items-center mb-20 md:mb-0">
             <LangSwitch />
 
-            <span>{<$>© Project Reproka 2025</$>}</span>
+            <span>{<$>© Project Reproka 2026</$>}</span>
           </div>
         </div>
       </div>

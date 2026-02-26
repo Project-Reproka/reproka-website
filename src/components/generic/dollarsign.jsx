@@ -6,13 +6,13 @@ import { useContext } from 'react'
 export default function $({ children }) {
   const translations = useContext(LanguageTranslations)
   
-  return translations[children] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  return translations[children] || children
 }
 
 export function $elementless(value) {
   const translations = useContext(LanguageTranslations)
   
-  return translations[value] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  return translations[value] || value
 }
 
 export function $units(category, text, plural, context) {
@@ -21,7 +21,7 @@ export function $units(category, text, plural, context) {
   const t3 = t2.units || {}
   const t4 = t3[category] || {}
   const t5 = t4[text] || {}
-  const t6 = t5[plural ? 1 : 0] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  const t6 = t5[plural ? 1 : 0] || '?'
   
   return t6
 }
@@ -65,7 +65,7 @@ export function $seasonmonth(number) {
   const t1 = translations.language_info || {}
   const t2 = t1.time_and_date || {}
   const t3 = t2.season_months || {}
-  const t4 = t3[number] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  const t4 = t3[number] || '?'
 
   return t4
 }
@@ -76,7 +76,7 @@ export function $lunarmonth(number) {
   const t1 = translations.language_info || {}
   const t2 = t1.time_and_date || {}
   const t3 = t2.lunar_months || {}
-  const t4 = t3[number] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  const t4 = t3[number] || '?'
   
   return t4
 }
@@ -87,7 +87,7 @@ export function $weekday(number) {
   const t1 = translations.language_info || {}
   const t2 = t1.time_and_date || {}
   const t3 = t2.weekdays || {}
-  const t4 = t3[number] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  const t4 = t3[number] || '?'
 
   return t4
 }
@@ -97,7 +97,7 @@ export function $numberinfo(thing) {
 
   const t1 = translations.language_info || {}
   const t2 = t1.numbers || {}
-  const t3 = t2[thing] || '!!!! 🚨🚨 UNDEFINED TEXT 🚨🚨 !!!!'
+  const t3 = t2[thing] || '?'
 
   return t3
 }
